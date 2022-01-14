@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html>
+  <head><!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta charset="UTF-8"><style>/*
+ * Bootstrap v2.2.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  background-color: #fff;
+}
+a {
+  color: #08c;
+  text-decoration: none;
+}
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row:after {
+  clear: both;
+}
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 20px;
+}
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 940px;
+}
+.span12 {
+  width: 940px;
+}
+.span11 {
+  width: 860px;
+}
+.span10 {
+  width: 780px;
+}
+.span9 {
+  width: 700px;
+}
+.span8 {
+  width: 620px;
+}
+.span7 {
+  width: 540px;
+}
+.span6 {
+  width: 460px;
+}
+.span5 {
+  width: 380px;
+}
+.span4 {
+  width: 300px;
+}
+.span3 {
+  width: 220px;
+}
+.span2 {
+  width: 140px;
+}
+.span1 {
+  width: 60px;
+}
+[class*="span"].pull-right,
+.row-fluid [class*="span"].pull-right {
+  float: right;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+.container:before,
+.container:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.container:after {
+  clear: both;
+}
+p {
+  margin: 0 0 10px;
+}
+.lead {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 30px;
+}
+small {
+  font-size: 85%;
+}
+h1 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+h1 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999;
+}
+h1 {
+  line-height: 40px;
+}
+h1 {
+  font-size: 38.5px;
+}
+h1 small {
+  font-size: 24.5px;
+}
+body {
+  margin-top: 90px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: -480px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding-top: 10px;
+  z-index: 10;
+}
+.footer {
+  color: #ddd;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+.footer a {
+  color: #ccc;
+  text-decoration: underline;
+}
+.the-icons {
+  font-size: 14px;
+  line-height: 24px;
+}
+.switch {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  color: #666;
+}
+.switch input {
+  margin-right: 0.3em;
+}
+.codesOn .i-name {
+  display: none;
+}
+.codesOn .i-code {
+  display: inline;
+}
+.i-code {
+  display: none;
+}
+@font-face {
+      font-family: 'fontello';
+      src: url('./font/fontello.eot?12065861');
+      src: url('./font/fontello.eot?12065861#iefix') format('embedded-opentype'),
+           url('./font/fontello.woff?12065861') format('woff'),
+           url('./font/fontello.ttf?12065861') format('truetype'),
+           url('./font/fontello.svg?12065861#fontello') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+     
+     
+    .demo-icon
+    {
+      font-family: "fontello";
+      font-style: normal;
+      font-weight: normal;
+      speak: never;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+     </style>
+    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/" + font.fontname + "-ie7.css"><![endif]-->
+    <script>
+      function toggleCodes(on) {
+        var obj = document.getElementById('icons');
+      
+        if (on) {
+          obj.className += ' codesOn';
+        } else {
+          obj.className = obj.className.replace(' codesOn', '');
+        }
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div class="container header">
+      <h1>fontello <small>font demo</small></h1>
+      <label class="switch">
+        <input type="checkbox" onclick="toggleCodes(this.checked)">show codes
+      </label>
+    </div>
+    <div class="container" id="icons">
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0x77"><i class="demo-icon WMi-th-large-1">&#x77;</i> <span class="i-name">WMi-th-large-1</span><span class="i-code">0x77</span></div>
+        <div class="the-icons span3" title="Code: 0xe763"><i class="demo-icon WMi-fast-fw">&#xe763;</i> <span class="i-name">WMi-fast-fw</span><span class="i-code">0xe763</span></div>
+        <div class="the-icons span3" title="Code: 0xe800"><i class="demo-icon WMi-ok">&#xe800;</i> <span class="i-name">WMi-ok</span><span class="i-code">0xe800</span></div>
+        <div class="the-icons span3" title="Code: 0xe801"><i class="demo-icon WMi-mail">&#xe801;</i> <span class="i-name">WMi-mail</span><span class="i-code">0xe801</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe802"><i class="demo-icon WMi-search">&#xe802;</i> <span class="i-name">WMi-search</span><span class="i-code">0xe802</span></div>
+        <div class="the-icons span3" title="Code: 0xe803"><i class="demo-icon WMi-lock">&#xe803;</i> <span class="i-name">WMi-lock</span><span class="i-code">0xe803</span></div>
+        <div class="the-icons span3" title="Code: 0xe804"><i class="demo-icon WMi-star-half">&#xe804;</i> <span class="i-name">WMi-star-half</span><span class="i-code">0xe804</span></div>
+        <div class="the-icons span3" title="Code: 0xe805"><i class="demo-icon WMi-attach-1">&#xe805;</i> <span class="i-name">WMi-attach-1</span><span class="i-code">0xe805</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe806"><i class="demo-icon WMi-star">&#xe806;</i> <span class="i-name">WMi-star</span><span class="i-code">0xe806</span></div>
+        <div class="the-icons span3" title="Code: 0xe807"><i class="demo-icon WMi-bookmark">&#xe807;</i> <span class="i-name">WMi-bookmark</span><span class="i-code">0xe807</span></div>
+        <div class="the-icons span3" title="Code: 0xe808"><i class="demo-icon WMi-heart">&#xe808;</i> <span class="i-name">WMi-heart</span><span class="i-code">0xe808</span></div>
+        <div class="the-icons span3" title="Code: 0xe809"><i class="demo-icon WMi-download">&#xe809;</i> <span class="i-name">WMi-download</span><span class="i-code">0xe809</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe80a"><i class="demo-icon WMi-cancel">&#xe80a;</i> <span class="i-name">WMi-cancel</span><span class="i-code">0xe80a</span></div>
+        <div class="the-icons span3" title="Code: 0xe80b"><i class="demo-icon WMi-trash-empty">&#xe80b;</i> <span class="i-name">WMi-trash-empty</span><span class="i-code">0xe80b</span></div>
+        <div class="the-icons span3" title="Code: 0xe80c"><i class="demo-icon WMi-lock-open">&#xe80c;</i> <span class="i-name">WMi-lock-open</span><span class="i-code">0xe80c</span></div>
+        <div class="the-icons span3" title="Code: 0xe80d"><i class="demo-icon WMi-resize-vertical">&#xe80d;</i> <span class="i-name">WMi-resize-vertical</span><span class="i-code">0xe80d</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe80e"><i class="demo-icon WMi-link">&#xe80e;</i> <span class="i-name">WMi-link</span><span class="i-code">0xe80e</span></div>
+        <div class="the-icons span3" title="Code: 0xe80f"><i class="demo-icon WMi-left-open">&#xe80f;</i> <span class="i-name">WMi-left-open</span><span class="i-code">0xe80f</span></div>
+        <div class="the-icons span3" title="Code: 0xe810"><i class="demo-icon WMi-upload">&#xe810;</i> <span class="i-name">WMi-upload</span><span class="i-code">0xe810</span></div>
+        <div class="the-icons span3" title="Code: 0xe811"><i class="demo-icon WMi-up-open">&#xe811;</i> <span class="i-name">WMi-up-open</span><span class="i-code">0xe811</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe812"><i class="demo-icon WMi-tag-1">&#xe812;</i> <span class="i-name">WMi-tag-1</span><span class="i-code">0xe812</span></div>
+        <div class="the-icons span3" title="Code: 0xe813"><i class="demo-icon WMi-indent-right">&#xe813;</i> <span class="i-name">WMi-indent-right</span><span class="i-code">0xe813</span></div>
+        <div class="the-icons span3" title="Code: 0xe814"><i class="demo-icon WMi-cog">&#xe814;</i> <span class="i-name">WMi-cog</span><span class="i-code">0xe814</span></div>
+        <div class="the-icons span3" title="Code: 0xe815"><i class="demo-icon WMi-star-empty">&#xe815;</i> <span class="i-name">WMi-star-empty</span><span class="i-code">0xe815</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe816"><i class="demo-icon WMi-truck">&#xe816;</i> <span class="i-name">WMi-truck</span><span class="i-code">0xe816</span></div>
+        <div class="the-icons span3" title="Code: 0xe817"><i class="demo-icon WMi-down-open">&#xe817;</i> <span class="i-name">WMi-down-open</span><span class="i-code">0xe817</span></div>
+        <div class="the-icons span3" title="Code: 0xe818"><i class="demo-icon WMi-picture">&#xe818;</i> <span class="i-name">WMi-picture</span><span class="i-code">0xe818</span></div>
+        <div class="the-icons span3" title="Code: 0xe819"><i class="demo-icon WMi-right-open">&#xe819;</i> <span class="i-name">WMi-right-open</span><span class="i-code">0xe819</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe81a"><i class="demo-icon WMi-music">&#xe81a;</i> <span class="i-name">WMi-music</span><span class="i-code">0xe81a</span></div>
+        <div class="the-icons span3" title="Code: 0xe81b"><i class="demo-icon WMi-heart-empty">&#xe81b;</i> <span class="i-name">WMi-heart-empty</span><span class="i-code">0xe81b</span></div>
+        <div class="the-icons span3" title="Code: 0xe81c"><i class="demo-icon WMi-temperatire">&#xe81c;</i> <span class="i-name">WMi-temperatire</span><span class="i-code">0xe81c</span></div>
+        <div class="the-icons span3" title="Code: 0xe81d"><i class="demo-icon WMi-comment">&#xe81d;</i> <span class="i-name">WMi-comment</span><span class="i-code">0xe81d</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe81e"><i class="demo-icon WMi-indent-left">&#xe81e;</i> <span class="i-name">WMi-indent-left</span><span class="i-code">0xe81e</span></div>
+        <div class="the-icons span3" title="Code: 0xe81f"><i class="demo-icon WMi-briefcase">&#xe81f;</i> <span class="i-name">WMi-briefcase</span><span class="i-code">0xe81f</span></div>
+        <div class="the-icons span3" title="Code: 0xe820"><i class="demo-icon WMi-cloud">&#xe820;</i> <span class="i-name">WMi-cloud</span><span class="i-code">0xe820</span></div>
+        <div class="the-icons span3" title="Code: 0xe821"><i class="demo-icon WMi-globe">&#xe821;</i> <span class="i-name">WMi-globe</span><span class="i-code">0xe821</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe822"><i class="demo-icon WMi-check">&#xe822;</i> <span class="i-name">WMi-check</span><span class="i-code">0xe822</span></div>
+        <div class="the-icons span3" title="Code: 0xe823"><i class="demo-icon WMi-arrows-cw">&#xe823;</i> <span class="i-name">WMi-arrows-cw</span><span class="i-code">0xe823</span></div>
+        <div class="the-icons span3" title="Code: 0xe824"><i class="demo-icon WMi-check-1">&#xe824;</i> <span class="i-name">WMi-check-1</span><span class="i-code">0xe824</span></div>
+        <div class="the-icons span3" title="Code: 0xe825"><i class="demo-icon WMi-attach">&#xe825;</i> <span class="i-name">WMi-attach</span><span class="i-code">0xe825</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe826"><i class="demo-icon WMi-zoom-out">&#xe826;</i> <span class="i-name">WMi-zoom-out</span><span class="i-code">0xe826</span></div>
+        <div class="the-icons span3" title="Code: 0xe827"><i class="demo-icon WMi-zoom-in">&#xe827;</i> <span class="i-name">WMi-zoom-in</span><span class="i-code">0xe827</span></div>
+        <div class="the-icons span3" title="Code: 0xe828"><i class="demo-icon WMi-signal">&#xe828;</i> <span class="i-name">WMi-signal</span><span class="i-code">0xe828</span></div>
+        <div class="the-icons span3" title="Code: 0xe829"><i class="demo-icon WMi-layers">&#xe829;</i> <span class="i-name">WMi-layers</span><span class="i-code">0xe829</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe82a"><i class="demo-icon WMi-comment-1">&#xe82a;</i> <span class="i-name">WMi-comment-1</span><span class="i-code">0xe82a</span></div>
+        <div class="the-icons span3" title="Code: 0xe82b"><i class="demo-icon WMi-cancel-1">&#xe82b;</i> <span class="i-name">WMi-cancel-1</span><span class="i-code">0xe82b</span></div>
+        <div class="the-icons span3" title="Code: 0xe82c"><i class="demo-icon WMi-emo-wink">&#xe82c;</i> <span class="i-name">WMi-emo-wink</span><span class="i-code">0xe82c</span></div>
+        <div class="the-icons span3" title="Code: 0xe82d"><i class="demo-icon WMi-emo-happy">&#xe82d;</i> <span class="i-name">WMi-emo-happy</span><span class="i-code">0xe82d</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe82e"><i class="demo-icon WMi-macstore">&#xe82e;</i> <span class="i-name">WMi-macstore</span><span class="i-code">0xe82e</span></div>
+        <div class="the-icons span3" title="Code: 0xe82f"><i class="demo-icon WMi-equalizer">&#xe82f;</i> <span class="i-name">WMi-equalizer</span><span class="i-code">0xe82f</span></div>
+        <div class="the-icons span3" title="Code: 0xe830"><i class="demo-icon WMi-emo-coffee">&#xe830;</i> <span class="i-name">WMi-emo-coffee</span><span class="i-code">0xe830</span></div>
+        <div class="the-icons span3" title="Code: 0xe831"><i class="demo-icon WMi-emo-sleep">&#xe831;</i> <span class="i-name">WMi-emo-sleep</span><span class="i-code">0xe831</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe832"><i class="demo-icon WMi-emo-unhappy">&#xe832;</i> <span class="i-name">WMi-emo-unhappy</span><span class="i-code">0xe832</span></div>
+        <div class="the-icons span3" title="Code: 0xe833"><i class="demo-icon WMi-emo-wink2">&#xe833;</i> <span class="i-name">WMi-emo-wink2</span><span class="i-code">0xe833</span></div>
+        <div class="the-icons span3" title="Code: 0xe834"><i class="demo-icon WMi-emo-laugh">&#xe834;</i> <span class="i-name">WMi-emo-laugh</span><span class="i-code">0xe834</span></div>
+        <div class="the-icons span3" title="Code: 0xe835"><i class="demo-icon WMi-emo-squint">&#xe835;</i> <span class="i-name">WMi-emo-squint</span><span class="i-code">0xe835</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe836"><i class="demo-icon WMi-emo-angry">&#xe836;</i> <span class="i-name">WMi-emo-angry</span><span class="i-code">0xe836</span></div>
+        <div class="the-icons span3" title="Code: 0xe837"><i class="demo-icon WMi-emo-sunglasses">&#xe837;</i> <span class="i-name">WMi-emo-sunglasses</span><span class="i-code">0xe837</span></div>
+        <div class="the-icons span3" title="Code: 0xe838"><i class="demo-icon WMi-off">&#xe838;</i> <span class="i-name">WMi-off</span><span class="i-code">0xe838</span></div>
+        <div class="the-icons span3" title="Code: 0xe839"><i class="demo-icon WMi-asterisk">&#xe839;</i> <span class="i-name">WMi-asterisk</span><span class="i-code">0xe839</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe83a"><i class="demo-icon WMi-user-tag">&#xe83a;</i> <span class="i-name">WMi-user-tag</span><span class="i-code">0xe83a</span></div>
+        <div class="the-icons span3" title="Code: 0xe83b"><i class="demo-icon WMi-emo-displeased">&#xe83b;</i> <span class="i-name">WMi-emo-displeased</span><span class="i-code">0xe83b</span></div>
+        <div class="the-icons span3" title="Code: 0xe83c"><i class="demo-icon WMi-gift">&#xe83c;</i> <span class="i-name">WMi-gift</span><span class="i-code">0xe83c</span></div>
+        <div class="the-icons span3" title="Code: 0xe83d"><i class="demo-icon WMi-shop">&#xe83d;</i> <span class="i-name">WMi-shop</span><span class="i-code">0xe83d</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe83e"><i class="demo-icon WMi-th">&#xe83e;</i> <span class="i-name">WMi-th</span><span class="i-code">0xe83e</span></div>
+        <div class="the-icons span3" title="Code: 0xe83f"><i class="demo-icon WMi-basket-2">&#xe83f;</i> <span class="i-name">WMi-basket-2</span><span class="i-code">0xe83f</span></div>
+        <div class="the-icons span3" title="Code: 0xe840"><i class="demo-icon WMi-shop-1">&#xe840;</i> <span class="i-name">WMi-shop-1</span><span class="i-code">0xe840</span></div>
+        <div class="the-icons span3" title="Code: 0xe841"><i class="demo-icon WMi-minus">&#xe841;</i> <span class="i-name">WMi-minus</span><span class="i-code">0xe841</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe842"><i class="demo-icon WMi-rss-1">&#xe842;</i> <span class="i-name">WMi-rss-1</span><span class="i-code">0xe842</span></div>
+        <div class="the-icons span3" title="Code: 0xe843"><i class="demo-icon WMi-basket-1">&#xe843;</i> <span class="i-name">WMi-basket-1</span><span class="i-code">0xe843</span></div>
+        <div class="the-icons span3" title="Code: 0xe844"><i class="demo-icon WMi-chat">&#xe844;</i> <span class="i-name">WMi-chat</span><span class="i-code">0xe844</span></div>
+        <div class="the-icons span3" title="Code: 0xe845"><i class="demo-icon WMi-home">&#xe845;</i> <span class="i-name">WMi-home</span><span class="i-code">0xe845</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe846"><i class="demo-icon WMi-tags">&#xe846;</i> <span class="i-name">WMi-tags</span><span class="i-code">0xe846</span></div>
+        <div class="the-icons span3" title="Code: 0xe847"><i class="demo-icon WMi-plus">&#xe847;</i> <span class="i-name">WMi-plus</span><span class="i-code">0xe847</span></div>
+        <div class="the-icons span3" title="Code: 0xe848"><i class="demo-icon WMi-retweet">&#xe848;</i> <span class="i-name">WMi-retweet</span><span class="i-code">0xe848</span></div>
+        <div class="the-icons span3" title="Code: 0xe849"><i class="demo-icon WMi-map-1">&#xe849;</i> <span class="i-name">WMi-map-1</span><span class="i-code">0xe849</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe84a"><i class="demo-icon WMi-logout-1">&#xe84a;</i> <span class="i-name">WMi-logout-1</span><span class="i-code">0xe84a</span></div>
+        <div class="the-icons span3" title="Code: 0xe84b"><i class="demo-icon WMi-edit">&#xe84b;</i> <span class="i-name">WMi-edit</span><span class="i-code">0xe84b</span></div>
+        <div class="the-icons span3" title="Code: 0xe84c"><i class="demo-icon WMi-doc-landscape">&#xe84c;</i> <span class="i-name">WMi-doc-landscape</span><span class="i-code">0xe84c</span></div>
+        <div class="the-icons span3" title="Code: 0xe84d"><i class="demo-icon WMi-back-in-time">&#xe84d;</i> <span class="i-name">WMi-back-in-time</span><span class="i-code">0xe84d</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe84e"><i class="demo-icon WMi-gift-1">&#xe84e;</i> <span class="i-name">WMi-gift-1</span><span class="i-code">0xe84e</span></div>
+        <div class="the-icons span3" title="Code: 0xe84f"><i class="demo-icon WMi-logout">&#xe84f;</i> <span class="i-name">WMi-logout</span><span class="i-code">0xe84f</span></div>
+        <div class="the-icons span3" title="Code: 0xe850"><i class="demo-icon WMi-chat-alt-1">&#xe850;</i> <span class="i-name">WMi-chat-alt-1</span><span class="i-code">0xe850</span></div>
+        <div class="the-icons span3" title="Code: 0xe851"><i class="demo-icon WMi-switch">&#xe851;</i> <span class="i-name">WMi-switch</span><span class="i-code">0xe851</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe852"><i class="demo-icon WMi-bank">&#xe852;</i> <span class="i-name">WMi-bank</span><span class="i-code">0xe852</span></div>
+        <div class="the-icons span3" title="Code: 0xe853"><i class="demo-icon WMi-location">&#xe853;</i> <span class="i-name">WMi-location</span><span class="i-code">0xe853</span></div>
+        <div class="the-icons span3" title="Code: 0xe854"><i class="demo-icon WMi-art-gallery">&#xe854;</i> <span class="i-name">WMi-art-gallery</span><span class="i-code">0xe854</span></div>
+        <div class="the-icons span3" title="Code: 0xe855"><i class="demo-icon WMi-level-down">&#xe855;</i> <span class="i-name">WMi-level-down</span><span class="i-code">0xe855</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe856"><i class="demo-icon WMi-phone">&#xe856;</i> <span class="i-name">WMi-phone</span><span class="i-code">0xe856</span></div>
+        <div class="the-icons span3" title="Code: 0xe857"><i class="demo-icon WMi-shuffle-1">&#xe857;</i> <span class="i-name">WMi-shuffle-1</span><span class="i-code">0xe857</span></div>
+        <div class="the-icons span3" title="Code: 0xe858"><i class="demo-icon WMi-help">&#xe858;</i> <span class="i-name">WMi-help</span><span class="i-code">0xe858</span></div>
+        <div class="the-icons span3" title="Code: 0xe859"><i class="demo-icon WMi-phone-1">&#xe859;</i> <span class="i-name">WMi-phone-1</span><span class="i-code">0xe859</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe85a"><i class="demo-icon WMi-loop">&#xe85a;</i> <span class="i-name">WMi-loop</span><span class="i-code">0xe85a</span></div>
+        <div class="the-icons span3" title="Code: 0xe85b"><i class="demo-icon WMi-agriculture">&#xe85b;</i> <span class="i-name">WMi-agriculture</span><span class="i-code">0xe85b</span></div>
+        <div class="the-icons span3" title="Code: 0xe85c"><i class="demo-icon WMi-share">&#xe85c;</i> <span class="i-name">WMi-share</span><span class="i-code">0xe85c</span></div>
+        <div class="the-icons span3" title="Code: 0xe85d"><i class="demo-icon WMi-warning-empty">&#xe85d;</i> <span class="i-name">WMi-warning-empty</span><span class="i-code">0xe85d</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe85e"><i class="demo-icon WMi-plus-alt">&#xe85e;</i> <span class="i-name">WMi-plus-alt</span><span class="i-code">0xe85e</span></div>
+        <div class="the-icons span3" title="Code: 0xe85f"><i class="demo-icon WMi-credit-card">&#xe85f;</i> <span class="i-name">WMi-credit-card</span><span class="i-code">0xe85f</span></div>
+        <div class="the-icons span3" title="Code: 0xe860"><i class="demo-icon WMi-shuffle">&#xe860;</i> <span class="i-name">WMi-shuffle</span><span class="i-code">0xe860</span></div>
+        <div class="the-icons span3" title="Code: 0xe861"><i class="demo-icon WMi-Clothes">&#xe861;</i> <span class="i-name">WMi-Clothes</span><span class="i-code">0xe861</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe862"><i class="demo-icon WMi-sport-cup">&#xe862;</i> <span class="i-name">WMi-sport-cup</span><span class="i-code">0xe862</span></div>
+        <div class="the-icons span3" title="Code: 0xe863"><i class="demo-icon WMi-wrench-1">&#xe863;</i> <span class="i-name">WMi-wrench-1</span><span class="i-code">0xe863</span></div>
+        <div class="the-icons span3" title="Code: 0xe864"><i class="demo-icon WMi-marquee">&#xe864;</i> <span class="i-name">WMi-marquee</span><span class="i-code">0xe864</span></div>
+        <div class="the-icons span3" title="Code: 0xe865"><i class="demo-icon WMi-emo-surprised">&#xe865;</i> <span class="i-name">WMi-emo-surprised</span><span class="i-code">0xe865</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe866"><i class="demo-icon WMi-glyph-11">&#xe866;</i> <span class="i-name">WMi-glyph-11</span><span class="i-code">0xe866</span></div>
+        <div class="the-icons span3" title="Code: 0xe867"><i class="demo-icon WMi-air-plane">&#xe867;</i> <span class="i-name">WMi-air-plane</span><span class="i-code">0xe867</span></div>
+        <div class="the-icons span3" title="Code: 0xe868"><i class="demo-icon WMi-glyph-48">&#xe868;</i> <span class="i-name">WMi-glyph-48</span><span class="i-code">0xe868</span></div>
+        <div class="the-icons span3" title="Code: 0xe869"><i class="demo-icon WMi-Repairing">&#xe869;</i> <span class="i-name">WMi-Repairing</span><span class="i-code">0xe869</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe86a"><i class="demo-icon WMi-Official">&#xe86a;</i> <span class="i-name">WMi-Official</span><span class="i-code">0xe86a</span></div>
+        <div class="the-icons span3" title="Code: 0xe86b"><i class="demo-icon WMi-advertising-1">&#xe86b;</i> <span class="i-name">WMi-advertising-1</span><span class="i-code">0xe86b</span></div>
+        <div class="the-icons span3" title="Code: 0xe86c"><i class="demo-icon WMi-camera">&#xe86c;</i> <span class="i-name">WMi-camera</span><span class="i-code">0xe86c</span></div>
+        <div class="the-icons span3" title="Code: 0xe86d"><i class="demo-icon WMi-map-4">&#xe86d;</i> <span class="i-name">WMi-map-4</span><span class="i-code">0xe86d</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe86e"><i class="demo-icon WMi-pencil">&#xe86e;</i> <span class="i-name">WMi-pencil</span><span class="i-code">0xe86e</span></div>
+        <div class="the-icons span3" title="Code: 0xe86f"><i class="demo-icon WMi-graduation-cap">&#xe86f;</i> <span class="i-name">WMi-graduation-cap</span><span class="i-code">0xe86f</span></div>
+        <div class="the-icons span3" title="Code: 0xe870"><i class="demo-icon WMi-advertisement">&#xe870;</i> <span class="i-name">WMi-advertisement</span><span class="i-code">0xe870</span></div>
+        <div class="the-icons span3" title="Code: 0xe871"><i class="demo-icon WMi-filter">&#xe871;</i> <span class="i-name">WMi-filter</span><span class="i-code">0xe871</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe872"><i class="demo-icon WMi-clock">&#xe872;</i> <span class="i-name">WMi-clock</span><span class="i-code">0xe872</span></div>
+        <div class="the-icons span3" title="Code: 0xe873"><i class="demo-icon WMi-glyph-25">&#xe873;</i> <span class="i-name">WMi-glyph-25</span><span class="i-code">0xe873</span></div>
+        <div class="the-icons span3" title="Code: 0xe874"><i class="demo-icon WMi-user">&#xe874;</i> <span class="i-name">WMi-user</span><span class="i-code">0xe874</span></div>
+        <div class="the-icons span3" title="Code: 0xe875"><i class="demo-icon WMi-users">&#xe875;</i> <span class="i-name">WMi-users</span><span class="i-code">0xe875</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe876"><i class="demo-icon WMi-crown-4">&#xe876;</i> <span class="i-name">WMi-crown-4</span><span class="i-code">0xe876</span></div>
+        <div class="the-icons span3" title="Code: 0xe877"><i class="demo-icon WMi-login">&#xe877;</i> <span class="i-name">WMi-login</span><span class="i-code">0xe877</span></div>
+        <div class="the-icons span3" title="Code: 0xe878"><i class="demo-icon WMi-brush">&#xe878;</i> <span class="i-name">WMi-brush</span><span class="i-code">0xe878</span></div>
+        <div class="the-icons span3" title="Code: 0xe879"><i class="demo-icon WMi-map-o">&#xe879;</i> <span class="i-name">WMi-map-o</span><span class="i-code">0xe879</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe87a"><i class="demo-icon WMi-flower">&#xe87a;</i> <span class="i-name">WMi-flower</span><span class="i-code">0xe87a</span></div>
+        <div class="the-icons span3" title="Code: 0xe87b"><i class="demo-icon WMi-camera-1">&#xe87b;</i> <span class="i-name">WMi-camera-1</span><span class="i-code">0xe87b</span></div>
+        <div class="the-icons span3" title="Code: 0xe87c"><i class="demo-icon WMi-calendar-1">&#xe87c;</i> <span class="i-name">WMi-calendar-1</span><span class="i-code">0xe87c</span></div>
+        <div class="the-icons span3" title="Code: 0xe87d"><i class="demo-icon WMi-calendar-2">&#xe87d;</i> <span class="i-name">WMi-calendar-2</span><span class="i-code">0xe87d</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe87e"><i class="demo-icon WMi-doc-text-inv-1">&#xe87e;</i> <span class="i-name">WMi-doc-text-inv-1</span><span class="i-code">0xe87e</span></div>
+        <div class="the-icons span3" title="Code: 0xe87f"><i class="demo-icon WMi-flight">&#xe87f;</i> <span class="i-name">WMi-flight</span><span class="i-code">0xe87f</span></div>
+        <div class="the-icons span3" title="Code: 0xe880"><i class="demo-icon WMi-videocam-1">&#xe880;</i> <span class="i-name">WMi-videocam-1</span><span class="i-code">0xe880</span></div>
+        <div class="the-icons span3" title="Code: 0xe881"><i class="demo-icon WMi-video-1">&#xe881;</i> <span class="i-name">WMi-video-1</span><span class="i-code">0xe881</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe882"><i class="demo-icon WMi-shop-3">&#xe882;</i> <span class="i-name">WMi-shop-3</span><span class="i-code">0xe882</span></div>
+        <div class="the-icons span3" title="Code: 0xe883"><i class="demo-icon WMi-glyph-30">&#xe883;</i> <span class="i-name">WMi-glyph-30</span><span class="i-code">0xe883</span></div>
+        <div class="the-icons span3" title="Code: 0xe884"><i class="demo-icon WMi-glyph-27">&#xe884;</i> <span class="i-name">WMi-glyph-27</span><span class="i-code">0xe884</span></div>
+        <div class="the-icons span3" title="Code: 0xe885"><i class="demo-icon WMi-glyph-26">&#xe885;</i> <span class="i-name">WMi-glyph-26</span><span class="i-code">0xe885</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe886"><i class="demo-icon WMi-glyph-29">&#xe886;</i> <span class="i-name">WMi-glyph-29</span><span class="i-code">0xe886</span></div>
+        <div class="the-icons span3" title="Code: 0xe887"><i class="demo-icon WMi-glyph-32">&#xe887;</i> <span class="i-name">WMi-glyph-32</span><span class="i-code">0xe887</span></div>
+        <div class="the-icons span3" title="Code: 0xe888"><i class="demo-icon WMi-glyph-31">&#xe888;</i> <span class="i-name">WMi-glyph-31</span><span class="i-code">0xe888</span></div>
+        <div class="the-icons span3" title="Code: 0xe889"><i class="demo-icon WMi-glyph-36">&#xe889;</i> <span class="i-name">WMi-glyph-36</span><span class="i-code">0xe889</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe88a"><i class="demo-icon WMi-glyph-33">&#xe88a;</i> <span class="i-name">WMi-glyph-33</span><span class="i-code">0xe88a</span></div>
+        <div class="the-icons span3" title="Code: 0xe88b"><i class="demo-icon WMi-glyph-34">&#xe88b;</i> <span class="i-name">WMi-glyph-34</span><span class="i-code">0xe88b</span></div>
+        <div class="the-icons span3" title="Code: 0xe88c"><i class="demo-icon WMi-glyph-38">&#xe88c;</i> <span class="i-name">WMi-glyph-38</span><span class="i-code">0xe88c</span></div>
+        <div class="the-icons span3" title="Code: 0xe88d"><i class="demo-icon WMi-glyph-35">&#xe88d;</i> <span class="i-name">WMi-glyph-35</span><span class="i-code">0xe88d</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe88e"><i class="demo-icon WMi-glyph-40">&#xe88e;</i> <span class="i-name">WMi-glyph-40</span><span class="i-code">0xe88e</span></div>
+        <div class="the-icons span3" title="Code: 0xe88f"><i class="demo-icon WMi-glyph-37">&#xe88f;</i> <span class="i-name">WMi-glyph-37</span><span class="i-code">0xe88f</span></div>
+        <div class="the-icons span3" title="Code: 0xe890"><i class="demo-icon WMi-glyph-42">&#xe890;</i> <span class="i-name">WMi-glyph-42</span><span class="i-code">0xe890</span></div>
+        <div class="the-icons span3" title="Code: 0xe891"><i class="demo-icon WMi-glyph-39">&#xe891;</i> <span class="i-name">WMi-glyph-39</span><span class="i-code">0xe891</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe892"><i class="demo-icon WMi-glyph-44">&#xe892;</i> <span class="i-name">WMi-glyph-44</span><span class="i-code">0xe892</span></div>
+        <div class="the-icons span3" title="Code: 0xe893"><i class="demo-icon WMi-glyph-41">&#xe893;</i> <span class="i-name">WMi-glyph-41</span><span class="i-code">0xe893</span></div>
+        <div class="the-icons span3" title="Code: 0xe895"><i class="demo-icon WMi-glyph-43">&#xe895;</i> <span class="i-name">WMi-glyph-43</span><span class="i-code">0xe895</span></div>
+        <div class="the-icons span3" title="Code: 0xe896"><i class="demo-icon WMi-gas-station">&#xe896;</i> <span class="i-name">WMi-gas-station</span><span class="i-code">0xe896</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe897"><i class="demo-icon WMi-glyph-45">&#xe897;</i> <span class="i-name">WMi-glyph-45</span><span class="i-code">0xe897</span></div>
+        <div class="the-icons span3" title="Code: 0xe898"><i class="demo-icon WMi-instagram-3">&#xe898;</i> <span class="i-name">WMi-instagram-3</span><span class="i-code">0xe898</span></div>
+        <div class="the-icons span3" title="Code: 0xe899"><i class="demo-icon WMi-business-affiliate-network-2">&#xe899;</i> <span class="i-name">WMi-business-affiliate-network-2</span><span class="i-code">0xe899</span></div>
+        <div class="the-icons span3" title="Code: 0xe89a"><i class="demo-icon WMi-globe-2">&#xe89a;</i> <span class="i-name">WMi-globe-2</span><span class="i-code">0xe89a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe89b"><i class="demo-icon WMi-bell">&#xe89b;</i> <span class="i-name">WMi-bell</span><span class="i-code">0xe89b</span></div>
+        <div class="the-icons span3" title="Code: 0xe89c"><i class="demo-icon WMi-code-1">&#xe89c;</i> <span class="i-name">WMi-code-1</span><span class="i-code">0xe89c</span></div>
+        <div class="the-icons span3" title="Code: 0xe89d"><i class="demo-icon WMi-emo-tongue">&#xe89d;</i> <span class="i-name">WMi-emo-tongue</span><span class="i-code">0xe89d</span></div>
+        <div class="the-icons span3" title="Code: 0xe89e"><i class="demo-icon WMi-photography-2">&#xe89e;</i> <span class="i-name">WMi-photography-2</span><span class="i-code">0xe89e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe89f"><i class="demo-icon WMi-bank-1">&#xe89f;</i> <span class="i-name">WMi-bank-1</span><span class="i-code">0xe89f</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a0"><i class="demo-icon WMi-off-1">&#xe8a0;</i> <span class="i-name">WMi-off-1</span><span class="i-code">0xe8a0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a1"><i class="demo-icon WMi-aparat-2">&#xe8a1;</i> <span class="i-name">WMi-aparat-2</span><span class="i-code">0xe8a1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a2"><i class="demo-icon WMi-eye">&#xe8a2;</i> <span class="i-name">WMi-eye</span><span class="i-code">0xe8a2</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8a3"><i class="demo-icon WMi-youtube-play">&#xe8a3;</i> <span class="i-name">WMi-youtube-play</span><span class="i-code">0xe8a3</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a4"><i class="demo-icon WMi-info-2">&#xe8a4;</i> <span class="i-name">WMi-info-2</span><span class="i-code">0xe8a4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a5"><i class="demo-icon WMi-cloud-1">&#xe8a5;</i> <span class="i-name">WMi-cloud-1</span><span class="i-code">0xe8a5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a6"><i class="demo-icon WMi-skype">&#xe8a6;</i> <span class="i-name">WMi-skype</span><span class="i-code">0xe8a6</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8a7"><i class="demo-icon WMi-eye-off">&#xe8a7;</i> <span class="i-name">WMi-eye-off</span><span class="i-code">0xe8a7</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a8"><i class="demo-icon WMi-percent-2">&#xe8a8;</i> <span class="i-name">WMi-percent-2</span><span class="i-code">0xe8a8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8a9"><i class="demo-icon WMi-info-circled-alt">&#xe8a9;</i> <span class="i-name">WMi-info-circled-alt</span><span class="i-code">0xe8a9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8aa"><i class="demo-icon WMi-align-justify-1">&#xe8aa;</i> <span class="i-name">WMi-align-justify-1</span><span class="i-code">0xe8aa</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8ab"><i class="demo-icon WMi-to-end-alt">&#xe8ab;</i> <span class="i-name">WMi-to-end-alt</span><span class="i-code">0xe8ab</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ac"><i class="demo-icon WMi-to-end">&#xe8ac;</i> <span class="i-name">WMi-to-end</span><span class="i-code">0xe8ac</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ad"><i class="demo-icon WMi-to-start">&#xe8ad;</i> <span class="i-name">WMi-to-start</span><span class="i-code">0xe8ad</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ae"><i class="demo-icon WMi-hourglass-1">&#xe8ae;</i> <span class="i-name">WMi-hourglass-1</span><span class="i-code">0xe8ae</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8af"><i class="demo-icon WMi-users-cog">&#xe8af;</i> <span class="i-name">WMi-users-cog</span><span class="i-code">0xe8af</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b0"><i class="demo-icon WMi-to-start-alt">&#xe8b0;</i> <span class="i-name">WMi-to-start-alt</span><span class="i-code">0xe8b0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b1"><i class="demo-icon WMi-play">&#xe8b1;</i> <span class="i-name">WMi-play</span><span class="i-code">0xe8b1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b2"><i class="demo-icon WMi-stop">&#xe8b2;</i> <span class="i-name">WMi-stop</span><span class="i-code">0xe8b2</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8b3"><i class="demo-icon WMi-align-center-2">&#xe8b3;</i> <span class="i-name">WMi-align-center-2</span><span class="i-code">0xe8b3</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b5"><i class="demo-icon WMi-doc-text">&#xe8b5;</i> <span class="i-name">WMi-doc-text</span><span class="i-code">0xe8b5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b6"><i class="demo-icon WMi-eject">&#xe8b6;</i> <span class="i-name">WMi-eject</span><span class="i-code">0xe8b6</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b7"><i class="demo-icon WMi-Beauty-1">&#xe8b7;</i> <span class="i-name">WMi-Beauty-1</span><span class="i-code">0xe8b7</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8b8"><i class="demo-icon WMi-braille">&#xe8b8;</i> <span class="i-name">WMi-braille</span><span class="i-code">0xe8b8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8b9"><i class="demo-icon WMi-user-md">&#xe8b9;</i> <span class="i-name">WMi-user-md</span><span class="i-code">0xe8b9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ba"><i class="demo-icon WMi-fast-bw">&#xe8ba;</i> <span class="i-name">WMi-fast-bw</span><span class="i-code">0xe8ba</span></div>
+        <div class="the-icons span3" title="Code: 0xe8bb"><i class="demo-icon WMi-align-left">&#xe8bb;</i> <span class="i-name">WMi-align-left</span><span class="i-code">0xe8bb</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8bc"><i class="demo-icon WMi-user-nurse">&#xe8bc;</i> <span class="i-name">WMi-user-nurse</span><span class="i-code">0xe8bc</span></div>
+        <div class="the-icons span3" title="Code: 0xe8bd"><i class="demo-icon WMi-pause">&#xe8bd;</i> <span class="i-name">WMi-pause</span><span class="i-code">0xe8bd</span></div>
+        <div class="the-icons span3" title="Code: 0xe8be"><i class="demo-icon WMi-clock-3">&#xe8be;</i> <span class="i-name">WMi-clock-3</span><span class="i-code">0xe8be</span></div>
+        <div class="the-icons span3" title="Code: 0xe8bf"><i class="demo-icon WMi-en-letters">&#xe8bf;</i> <span class="i-name">WMi-en-letters</span><span class="i-code">0xe8bf</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8c0"><i class="demo-icon WMi-user-graduate">&#xe8c0;</i> <span class="i-name">WMi-user-graduate</span><span class="i-code">0xe8c0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c1"><i class="demo-icon WMi-sitemap">&#xe8c1;</i> <span class="i-name">WMi-sitemap</span><span class="i-code">0xe8c1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c2"><i class="demo-icon WMi-comment-processing-2">&#xe8c2;</i> <span class="i-name">WMi-comment-processing-2</span><span class="i-code">0xe8c2</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c3"><i class="demo-icon WMi-emo-saint">&#xe8c3;</i> <span class="i-name">WMi-emo-saint</span><span class="i-code">0xe8c3</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8c4"><i class="demo-icon WMi-back">&#xe8c4;</i> <span class="i-name">WMi-back</span><span class="i-code">0xe8c4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c5"><i class="demo-icon WMi-person">&#xe8c5;</i> <span class="i-name">WMi-person</span><span class="i-code">0xe8c5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c6"><i class="demo-icon WMi-plus-outlined">&#xe8c6;</i> <span class="i-name">WMi-plus-outlined</span><span class="i-code">0xe8c6</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c7"><i class="demo-icon WMi-comments">&#xe8c7;</i> <span class="i-name">WMi-comments</span><span class="i-code">0xe8c7</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8c8"><i class="demo-icon WMi-trash-alt">&#xe8c8;</i> <span class="i-name">WMi-trash-alt</span><span class="i-code">0xe8c8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8c9"><i class="demo-icon WMi-user-cog">&#xe8c9;</i> <span class="i-name">WMi-user-cog</span><span class="i-code">0xe8c9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ca"><i class="demo-icon WMi-user-friends">&#xe8ca;</i> <span class="i-name">WMi-user-friends</span><span class="i-code">0xe8ca</span></div>
+        <div class="the-icons span3" title="Code: 0xe8cb"><i class="demo-icon WMi-user-clock">&#xe8cb;</i> <span class="i-name">WMi-user-clock</span><span class="i-code">0xe8cb</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8cc"><i class="demo-icon WMi-ar-letters">&#xe8cc;</i> <span class="i-name">WMi-ar-letters</span><span class="i-code">0xe8cc</span></div>
+        <div class="the-icons span3" title="Code: 0xe8cd"><i class="demo-icon WMi-transgender">&#xe8cd;</i> <span class="i-name">WMi-transgender</span><span class="i-code">0xe8cd</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ce"><i class="demo-icon WMi-user-tie">&#xe8ce;</i> <span class="i-name">WMi-user-tie</span><span class="i-code">0xe8ce</span></div>
+        <div class="the-icons span3" title="Code: 0xe8cf"><i class="demo-icon WMi-headphones">&#xe8cf;</i> <span class="i-name">WMi-headphones</span><span class="i-code">0xe8cf</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8d1"><i class="demo-icon WMi-infinity-1">&#xe8d1;</i> <span class="i-name">WMi-infinity-1</span><span class="i-code">0xe8d1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d2"><i class="demo-icon WMi-youtube-1">&#xe8d2;</i> <span class="i-name">WMi-youtube-1</span><span class="i-code">0xe8d2</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d3"><i class="demo-icon WMi-quote-left-alt">&#xe8d3;</i> <span class="i-name">WMi-quote-left-alt</span><span class="i-code">0xe8d3</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d4"><i class="demo-icon WMi-fa-letters-1">&#xe8d4;</i> <span class="i-name">WMi-fa-letters-1</span><span class="i-code">0xe8d4</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8d5"><i class="demo-icon WMi-number">&#xe8d5;</i> <span class="i-name">WMi-number</span><span class="i-code">0xe8d5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d6"><i class="demo-icon WMi-apple-alt">&#xe8d6;</i> <span class="i-name">WMi-apple-alt</span><span class="i-code">0xe8d6</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d8"><i class="demo-icon WMi-th-1">&#xe8d8;</i> <span class="i-name">WMi-th-1</span><span class="i-code">0xe8d8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8d9"><i class="demo-icon WMi-gender-female">&#xe8d9;</i> <span class="i-name">WMi-gender-female</span><span class="i-code">0xe8d9</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8da"><i class="demo-icon WMi-user-shield">&#xe8da;</i> <span class="i-name">WMi-user-shield</span><span class="i-code">0xe8da</span></div>
+        <div class="the-icons span3" title="Code: 0xe8dc"><i class="demo-icon WMi-max">&#xe8dc;</i> <span class="i-name">WMi-max</span><span class="i-code">0xe8dc</span></div>
+        <div class="the-icons span3" title="Code: 0xe8dd"><i class="demo-icon WMi-comments-alt">&#xe8dd;</i> <span class="i-name">WMi-comments-alt</span><span class="i-code">0xe8dd</span></div>
+        <div class="the-icons span3" title="Code: 0xe8de"><i class="demo-icon WMi-color-palette">&#xe8de;</i> <span class="i-name">WMi-color-palette</span><span class="i-code">0xe8de</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8df"><i class="demo-icon WMi-user-lock">&#xe8df;</i> <span class="i-name">WMi-user-lock</span><span class="i-code">0xe8df</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e0"><i class="demo-icon WMi-wordpress">&#xe8e0;</i> <span class="i-name">WMi-wordpress</span><span class="i-code">0xe8e0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e5"><i class="demo-icon WMi-restroom">&#xe8e5;</i> <span class="i-name">WMi-restroom</span><span class="i-code">0xe8e5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e6"><i class="demo-icon WMi-user-minus">&#xe8e6;</i> <span class="i-name">WMi-user-minus</span><span class="i-code">0xe8e6</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8e7"><i class="demo-icon WMi-eq-1">&#xe8e7;</i> <span class="i-name">WMi-eq-1</span><span class="i-code">0xe8e7</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e8"><i class="demo-icon WMi-gift-3">&#xe8e8;</i> <span class="i-name">WMi-gift-3</span><span class="i-code">0xe8e8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8e9"><i class="demo-icon WMi-location-arrow">&#xe8e9;</i> <span class="i-name">WMi-location-arrow</span><span class="i-code">0xe8e9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ea"><i class="demo-icon WMi-glyph-28">&#xe8ea;</i> <span class="i-name">WMi-glyph-28</span><span class="i-code">0xe8ea</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8eb"><i class="demo-icon WMi-pinterest">&#xe8eb;</i> <span class="i-name">WMi-pinterest</span><span class="i-code">0xe8eb</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ec"><i class="demo-icon WMi-user-slash">&#xe8ec;</i> <span class="i-name">WMi-user-slash</span><span class="i-code">0xe8ec</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ed"><i class="demo-icon WMi-willa-engine">&#xe8ed;</i> <span class="i-name">WMi-willa-engine</span><span class="i-code">0xe8ed</span></div>
+        <div class="the-icons span3" title="Code: 0xe8ee"><i class="demo-icon WMi-sort-numeric-up">&#xe8ee;</i> <span class="i-name">WMi-sort-numeric-up</span><span class="i-code">0xe8ee</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8ef"><i class="demo-icon WMi-fish">&#xe8ef;</i> <span class="i-name">WMi-fish</span><span class="i-code">0xe8ef</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f0"><i class="demo-icon WMi-min">&#xe8f0;</i> <span class="i-name">WMi-min</span><span class="i-code">0xe8f0</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f1"><i class="demo-icon WMi-sort-numeric-down">&#xe8f1;</i> <span class="i-name">WMi-sort-numeric-down</span><span class="i-code">0xe8f1</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f2"><i class="demo-icon WMi-gender-male-2">&#xe8f2;</i> <span class="i-name">WMi-gender-male-2</span><span class="i-code">0xe8f2</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8f3"><i class="demo-icon WMi-undo-1">&#xe8f3;</i> <span class="i-name">WMi-undo-1</span><span class="i-code">0xe8f3</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f4"><i class="demo-icon WMi-linkedin-3">&#xe8f4;</i> <span class="i-name">WMi-linkedin-3</span><span class="i-code">0xe8f4</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f5"><i class="demo-icon WMi-sort-alphabetical">&#xe8f5;</i> <span class="i-name">WMi-sort-alphabetical</span><span class="i-code">0xe8f5</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f6"><i class="demo-icon WMi-telegram-5">&#xe8f6;</i> <span class="i-name">WMi-telegram-5</span><span class="i-code">0xe8f6</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8f7"><i class="demo-icon WMi-temperature-fahrenheit-2">&#xe8f7;</i> <span class="i-name">WMi-temperature-fahrenheit-2</span><span class="i-code">0xe8f7</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f8"><i class="demo-icon WMi-infinity">&#xe8f8;</i> <span class="i-name">WMi-infinity</span><span class="i-code">0xe8f8</span></div>
+        <div class="the-icons span3" title="Code: 0xe8f9"><i class="demo-icon WMi-quote-right-alt">&#xe8f9;</i> <span class="i-name">WMi-quote-right-alt</span><span class="i-code">0xe8f9</span></div>
+        <div class="the-icons span3" title="Code: 0xe8fa"><i class="demo-icon WMi-linkedin-1">&#xe8fa;</i> <span class="i-name">WMi-linkedin-1</span><span class="i-code">0xe8fa</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8fb"><i class="demo-icon WMi-users-3">&#xe8fb;</i> <span class="i-name">WMi-users-3</span><span class="i-code">0xe8fb</span></div>
+        <div class="the-icons span3" title="Code: 0xe8fc"><i class="demo-icon WMi-python">&#xe8fc;</i> <span class="i-name">WMi-python</span><span class="i-code">0xe8fc</span></div>
+        <div class="the-icons span3" title="Code: 0xe8fd"><i class="demo-icon WMi-backspace">&#xe8fd;</i> <span class="i-name">WMi-backspace</span><span class="i-code">0xe8fd</span></div>
+        <div class="the-icons span3" title="Code: 0xe8fe"><i class="demo-icon WMi-sim-card">&#xe8fe;</i> <span class="i-name">WMi-sim-card</span><span class="i-code">0xe8fe</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe8ff"><i class="demo-icon WMi-graphic">&#xe8ff;</i> <span class="i-name">WMi-graphic</span><span class="i-code">0xe8ff</span></div>
+        <div class="the-icons span3" title="Code: 0xe900"><i class="demo-icon WMi-php">&#xe900;</i> <span class="i-name">WMi-php</span><span class="i-code">0xe900</span></div>
+        <div class="the-icons span3" title="Code: 0xe901"><i class="demo-icon WMi-comment-alt">&#xe901;</i> <span class="i-name">WMi-comment-alt</span><span class="i-code">0xe901</span></div>
+        <div class="the-icons span3" title="Code: 0xe902"><i class="demo-icon WMi-emo-grin">&#xe902;</i> <span class="i-name">WMi-emo-grin</span><span class="i-code">0xe902</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe905"><i class="demo-icon WMi-temperature-celsius-2">&#xe905;</i> <span class="i-name">WMi-temperature-celsius-2</span><span class="i-code">0xe905</span></div>
+        <div class="the-icons span3" title="Code: 0xe908"><i class="demo-icon WMi-theme">&#xe908;</i> <span class="i-name">WMi-theme</span><span class="i-code">0xe908</span></div>
+        <div class="the-icons span3" title="Code: 0xe90c"><i class="demo-icon WMi-greater-than-equal">&#xe90c;</i> <span class="i-name">WMi-greater-than-equal</span><span class="i-code">0xe90c</span></div>
+        <div class="the-icons span3" title="Code: 0xe90d"><i class="demo-icon WMi-mouse">&#xe90d;</i> <span class="i-name">WMi-mouse</span><span class="i-code">0xe90d</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe90e"><i class="demo-icon WMi-pizza-slice">&#xe90e;</i> <span class="i-name">WMi-pizza-slice</span><span class="i-code">0xe90e</span></div>
+        <div class="the-icons span3" title="Code: 0xe917"><i class="demo-icon WMi-sd-card">&#xe917;</i> <span class="i-name">WMi-sd-card</span><span class="i-code">0xe917</span></div>
+        <div class="the-icons span3" title="Code: 0xe919"><i class="demo-icon WMi-archive">&#xe919;</i> <span class="i-name">WMi-archive</span><span class="i-code">0xe919</span></div>
+        <div class="the-icons span3" title="Code: 0xe91a"><i class="demo-icon WMi-landmark">&#xe91a;</i> <span class="i-name">WMi-landmark</span><span class="i-code">0xe91a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe91b"><i class="demo-icon WMi-car-crash">&#xe91b;</i> <span class="i-name">WMi-car-crash</span><span class="i-code">0xe91b</span></div>
+        <div class="the-icons span3" title="Code: 0xe91c"><i class="demo-icon WMi-car-side">&#xe91c;</i> <span class="i-name">WMi-car-side</span><span class="i-code">0xe91c</span></div>
+        <div class="the-icons span3" title="Code: 0xe91d"><i class="demo-icon WMi-map-marked-2">&#xe91d;</i> <span class="i-name">WMi-map-marked-2</span><span class="i-code">0xe91d</span></div>
+        <div class="the-icons span3" title="Code: 0xe92e"><i class="demo-icon WMi-truck-monster">&#xe92e;</i> <span class="i-name">WMi-truck-monster</span><span class="i-code">0xe92e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe93e"><i class="demo-icon WMi-equals">&#xe93e;</i> <span class="i-name">WMi-equals</span><span class="i-code">0xe93e</span></div>
+        <div class="the-icons span3" title="Code: 0xe948"><i class="demo-icon WMi-internet-explorer">&#xe948;</i> <span class="i-name">WMi-internet-explorer</span><span class="i-code">0xe948</span></div>
+        <div class="the-icons span3" title="Code: 0xe94b"><i class="demo-icon WMi-basket">&#xe94b;</i> <span class="i-name">WMi-basket</span><span class="i-code">0xe94b</span></div>
+        <div class="the-icons span3" title="Code: 0xe94c"><i class="demo-icon WMi-navigation">&#xe94c;</i> <span class="i-name">WMi-navigation</span><span class="i-code">0xe94c</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe953"><i class="demo-icon WMi-drafting-compass">&#xe953;</i> <span class="i-name">WMi-drafting-compass</span><span class="i-code">0xe953</span></div>
+        <div class="the-icons span3" title="Code: 0xe959"><i class="demo-icon WMi-signal-1">&#xe959;</i> <span class="i-name">WMi-signal-1</span><span class="i-code">0xe959</span></div>
+        <div class="the-icons span3" title="Code: 0xe95b"><i class="demo-icon WMi-envelope-open-tex">&#xe95b;</i> <span class="i-name">WMi-envelope-open-tex</span><span class="i-code">0xe95b</span></div>
+        <div class="the-icons span3" title="Code: 0xe961"><i class="demo-icon WMi-barcode">&#xe961;</i> <span class="i-name">WMi-barcode</span><span class="i-code">0xe961</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe962"><i class="demo-icon WMi-sort-numeric">&#xe962;</i> <span class="i-name">WMi-sort-numeric</span><span class="i-code">0xe962</span></div>
+        <div class="the-icons span3" title="Code: 0xe963"><i class="demo-icon WMi-sort-alpha-up-alt">&#xe963;</i> <span class="i-name">WMi-sort-alpha-up-alt</span><span class="i-code">0xe963</span></div>
+        <div class="the-icons span3" title="Code: 0xe964"><i class="demo-icon WMi-sort-alpha-down">&#xe964;</i> <span class="i-name">WMi-sort-alpha-down</span><span class="i-code">0xe964</span></div>
+        <div class="the-icons span3" title="Code: 0xe965"><i class="demo-icon WMi-calendar-alt">&#xe965;</i> <span class="i-name">WMi-calendar-alt</span><span class="i-code">0xe965</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe966"><i class="demo-icon WMi-calendar">&#xe966;</i> <span class="i-name">WMi-calendar</span><span class="i-code">0xe966</span></div>
+        <div class="the-icons span3" title="Code: 0xe967"><i class="demo-icon WMi-quote-right">&#xe967;</i> <span class="i-name">WMi-quote-right</span><span class="i-code">0xe967</span></div>
+        <div class="the-icons span3" title="Code: 0xe968"><i class="demo-icon WMi-quote-left">&#xe968;</i> <span class="i-name">WMi-quote-left</span><span class="i-code">0xe968</span></div>
+        <div class="the-icons span3" title="Code: 0xe969"><i class="demo-icon WMi-radiation">&#xe969;</i> <span class="i-name">WMi-radiation</span><span class="i-code">0xe969</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe96a"><i class="demo-icon WMi-pepper-hot">&#xe96a;</i> <span class="i-name">WMi-pepper-hot</span><span class="i-code">0xe96a</span></div>
+        <div class="the-icons span3" title="Code: 0xe96b"><i class="demo-icon WMi-hamburger">&#xe96b;</i> <span class="i-name">WMi-hamburger</span><span class="i-code">0xe96b</span></div>
+        <div class="the-icons span3" title="Code: 0xe96c"><i class="demo-icon WMi-list">&#xe96c;</i> <span class="i-name">WMi-list</span><span class="i-code">0xe96c</span></div>
+        <div class="the-icons span3" title="Code: 0xe96d"><i class="demo-icon WMi-comment-2">&#xe96d;</i> <span class="i-name">WMi-comment-2</span><span class="i-code">0xe96d</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe96e"><i class="demo-icon WMi-list-ol">&#xe96e;</i> <span class="i-name">WMi-list-ol</span><span class="i-code">0xe96e</span></div>
+        <div class="the-icons span3" title="Code: 0xe96f"><i class="demo-icon WMi-th-list">&#xe96f;</i> <span class="i-name">WMi-th-list</span><span class="i-code">0xe96f</span></div>
+        <div class="the-icons span3" title="Code: 0xe970"><i class="demo-icon WMi-percentage">&#xe970;</i> <span class="i-name">WMi-percentage</span><span class="i-code">0xe970</span></div>
+        <div class="the-icons span3" title="Code: 0xe971"><i class="demo-icon WMi-trash-alt-4">&#xe971;</i> <span class="i-name">WMi-trash-alt-4</span><span class="i-code">0xe971</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe972"><i class="demo-icon WMi-plane-arrival">&#xe972;</i> <span class="i-name">WMi-plane-arrival</span><span class="i-code">0xe972</span></div>
+        <div class="the-icons span3" title="Code: 0xe973"><i class="demo-icon WMi-factory-2">&#xe973;</i> <span class="i-name">WMi-factory-2</span><span class="i-code">0xe973</span></div>
+        <div class="the-icons span3" title="Code: 0xe974"><i class="demo-icon WMi-helicopter">&#xe974;</i> <span class="i-name">WMi-helicopter</span><span class="i-code">0xe974</span></div>
+        <div class="the-icons span3" title="Code: 0xe975"><i class="demo-icon WMi-warehouse-2">&#xe975;</i> <span class="i-name">WMi-warehouse-2</span><span class="i-code">0xe975</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe976"><i class="demo-icon WMi-transgender-1">&#xe976;</i> <span class="i-name">WMi-transgender-1</span><span class="i-code">0xe976</span></div>
+        <div class="the-icons span3" title="Code: 0xe977"><i class="demo-icon WMi-map-signs">&#xe977;</i> <span class="i-name">WMi-map-signs</span><span class="i-code">0xe977</span></div>
+        <div class="the-icons span3" title="Code: 0xe978"><i class="demo-icon WMi-wifi-1">&#xe978;</i> <span class="i-name">WMi-wifi-1</span><span class="i-code">0xe978</span></div>
+        <div class="the-icons span3" title="Code: 0xe97a"><i class="demo-icon WMi-ruler-horizontal">&#xe97a;</i> <span class="i-name">WMi-ruler-horizontal</span><span class="i-code">0xe97a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe97b"><i class="demo-icon WMi-scale">&#xe97b;</i> <span class="i-name">WMi-scale</span><span class="i-code">0xe97b</span></div>
+        <div class="the-icons span3" title="Code: 0xe97c"><i class="demo-icon WMi-cylinder">&#xe97c;</i> <span class="i-name">WMi-cylinder</span><span class="i-code">0xe97c</span></div>
+        <div class="the-icons span3" title="Code: 0xe97d"><i class="demo-icon WMi-biking">&#xe97d;</i> <span class="i-name">WMi-biking</span><span class="i-code">0xe97d</span></div>
+        <div class="the-icons span3" title="Code: 0xe97e"><i class="demo-icon WMi-wheelchair">&#xe97e;</i> <span class="i-name">WMi-wheelchair</span><span class="i-code">0xe97e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe97f"><i class="demo-icon WMi-folder">&#xe97f;</i> <span class="i-name">WMi-folder</span><span class="i-code">0xe97f</span></div>
+        <div class="the-icons span3" title="Code: 0xe980"><i class="demo-icon WMi-chart-bar">&#xe980;</i> <span class="i-name">WMi-chart-bar</span><span class="i-code">0xe980</span></div>
+        <div class="the-icons span3" title="Code: 0xe981"><i class="demo-icon WMi-cogs">&#xe981;</i> <span class="i-name">WMi-cogs</span><span class="i-code">0xe981</span></div>
+        <div class="the-icons span3" title="Code: 0xe982"><i class="demo-icon WMi-cheese">&#xe982;</i> <span class="i-name">WMi-cheese</span><span class="i-code">0xe982</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe984"><i class="demo-icon WMi-sort-amount-down-alt-2">&#xe984;</i> <span class="i-name">WMi-sort-amount-down-alt-2</span><span class="i-code">0xe984</span></div>
+        <div class="the-icons span3" title="Code: 0xe985"><i class="demo-icon WMi-sort-amount-up-alt">&#xe985;</i> <span class="i-name">WMi-sort-amount-up-alt</span><span class="i-code">0xe985</span></div>
+        <div class="the-icons span3" title="Code: 0xe986"><i class="demo-icon WMi-bike">&#xe986;</i> <span class="i-name">WMi-bike</span><span class="i-code">0xe986</span></div>
+        <div class="the-icons span3" title="Code: 0xe987"><i class="demo-icon WMi-fire-alt">&#xe987;</i> <span class="i-name">WMi-fire-alt</span><span class="i-code">0xe987</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe988"><i class="demo-icon WMi-carrot">&#xe988;</i> <span class="i-name">WMi-carrot</span><span class="i-code">0xe988</span></div>
+        <div class="the-icons span3" title="Code: 0xe989"><i class="demo-icon WMi-horse-head">&#xe989;</i> <span class="i-name">WMi-horse-head</span><span class="i-code">0xe989</span></div>
+        <div class="the-icons span3" title="Code: 0xe98a"><i class="demo-icon WMi-cylinder-1">&#xe98a;</i> <span class="i-name">WMi-cylinder-1</span><span class="i-code">0xe98a</span></div>
+        <div class="the-icons span3" title="Code: 0xe98b"><i class="demo-icon WMi-pos">&#xe98b;</i> <span class="i-name">WMi-pos</span><span class="i-code">0xe98b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe98c"><i class="demo-icon WMi-pos-terminal">&#xe98c;</i> <span class="i-name">WMi-pos-terminal</span><span class="i-code">0xe98c</span></div>
+        <div class="the-icons span3" title="Code: 0xe98d"><i class="demo-icon WMi-ladder">&#xe98d;</i> <span class="i-name">WMi-ladder</span><span class="i-code">0xe98d</span></div>
+        <div class="the-icons span3" title="Code: 0xe98e"><i class="demo-icon WMi-ice-cream">&#xe98e;</i> <span class="i-name">WMi-ice-cream</span><span class="i-code">0xe98e</span></div>
+        <div class="the-icons span3" title="Code: 0xe98f"><i class="demo-icon WMi-oil-can">&#xe98f;</i> <span class="i-name">WMi-oil-can</span><span class="i-code">0xe98f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe990"><i class="demo-icon WMi-spider">&#xe990;</i> <span class="i-name">WMi-spider</span><span class="i-code">0xe990</span></div>
+        <div class="the-icons span3" title="Code: 0xe991"><i class="demo-icon WMi-skull-crossbones">&#xe991;</i> <span class="i-name">WMi-skull-crossbones</span><span class="i-code">0xe991</span></div>
+        <div class="the-icons span3" title="Code: 0xe992"><i class="demo-icon WMi-plane-departure-2">&#xe992;</i> <span class="i-name">WMi-plane-departure-2</span><span class="i-code">0xe992</span></div>
+        <div class="the-icons span3" title="Code: 0xe993"><i class="demo-icon WMi-library-books">&#xe993;</i> <span class="i-name">WMi-library-books</span><span class="i-code">0xe993</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe994"><i class="demo-icon WMi-glass-martini-alt">&#xe994;</i> <span class="i-name">WMi-glass-martini-alt</span><span class="i-code">0xe994</span></div>
+        <div class="the-icons span3" title="Code: 0xe995"><i class="demo-icon WMi-shopping">&#xe995;</i> <span class="i-name">WMi-shopping</span><span class="i-code">0xe995</span></div>
+        <div class="the-icons span3" title="Code: 0xe996"><i class="demo-icon WMi-taxi">&#xe996;</i> <span class="i-name">WMi-taxi</span><span class="i-code">0xe996</span></div>
+        <div class="the-icons span3" title="Code: 0xe997"><i class="demo-icon WMi-lock-open-1">&#xe997;</i> <span class="i-name">WMi-lock-open-1</span><span class="i-code">0xe997</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe998"><i class="demo-icon WMi-bed">&#xe998;</i> <span class="i-name">WMi-bed</span><span class="i-code">0xe998</span></div>
+        <div class="the-icons span3" title="Code: 0xe999"><i class="demo-icon WMi-fingerprint">&#xe999;</i> <span class="i-name">WMi-fingerprint</span><span class="i-code">0xe999</span></div>
+        <div class="the-icons span3" title="Code: 0xe99a"><i class="demo-icon WMi-shield-2">&#xe99a;</i> <span class="i-name">WMi-shield-2</span><span class="i-code">0xe99a</span></div>
+        <div class="the-icons span3" title="Code: 0xe99b"><i class="demo-icon WMi-shuttle-van">&#xe99b;</i> <span class="i-name">WMi-shuttle-van</span><span class="i-code">0xe99b</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe99c"><i class="demo-icon WMi-mug-hot">&#xe99c;</i> <span class="i-name">WMi-mug-hot</span><span class="i-code">0xe99c</span></div>
+        <div class="the-icons span3" title="Code: 0xe99e"><i class="demo-icon WMi-mosque">&#xe99e;</i> <span class="i-name">WMi-mosque</span><span class="i-code">0xe99e</span></div>
+        <div class="the-icons span3" title="Code: 0xe99f"><i class="demo-icon WMi-tooth">&#xe99f;</i> <span class="i-name">WMi-tooth</span><span class="i-code">0xe99f</span></div>
+        <div class="the-icons span3" title="Code: 0xe9a0"><i class="demo-icon WMi-broadcast-tower">&#xe9a0;</i> <span class="i-name">WMi-broadcast-tower</span><span class="i-code">0xe9a0</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe9a1"><i class="demo-icon WMi-table-tennis">&#xe9a1;</i> <span class="i-name">WMi-table-tennis</span><span class="i-code">0xe9a1</span></div>
+        <div class="the-icons span3" title="Code: 0xe9a2"><i class="demo-icon WMi-star-of-david">&#xe9a2;</i> <span class="i-name">WMi-star-of-david</span><span class="i-code">0xe9a2</span></div>
+        <div class="the-icons span3" title="Code: 0xe9a3"><i class="demo-icon WMi-snowflake-o">&#xe9a3;</i> <span class="i-name">WMi-snowflake-o</span><span class="i-code">0xe9a3</span></div>
+        <div class="the-icons span3" title="Code: 0xe9a4"><i class="demo-icon WMi-th-large">&#xe9a4;</i> <span class="i-name">WMi-th-large</span><span class="i-code">0xe9a4</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe9a5"><i class="demo-icon WMi-wrench-2">&#xe9a5;</i> <span class="i-name">WMi-wrench-2</span><span class="i-code">0xe9a5</span></div>
+        <div class="the-icons span3" title="Code: 0xe9a9"><i class="demo-icon WMi-shopping-cart">&#xe9a9;</i> <span class="i-name">WMi-shopping-cart</span><span class="i-code">0xe9a9</span></div>
+        <div class="the-icons span3" title="Code: 0xe9aa"><i class="demo-icon WMi-cart">&#xe9aa;</i> <span class="i-name">WMi-cart</span><span class="i-code">0xe9aa</span></div>
+        <div class="the-icons span3" title="Code: 0xe9ab"><i class="demo-icon WMi-communications">&#xe9ab;</i> <span class="i-name">WMi-communications</span><span class="i-code">0xe9ab</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe9ac"><i class="demo-icon WMi-home-heart">&#xe9ac;</i> <span class="i-name">WMi-home-heart</span><span class="i-code">0xe9ac</span></div>
+        <div class="the-icons span3" title="Code: 0xe9ae"><i class="demo-icon WMi-hdd-1">&#xe9ae;</i> <span class="i-name">WMi-hdd-1</span><span class="i-code">0xe9ae</span></div>
+        <div class="the-icons span3" title="Code: 0xe9af"><i class="demo-icon WMi-map-2">&#xe9af;</i> <span class="i-name">WMi-map-2</span><span class="i-code">0xe9af</span></div>
+        <div class="the-icons span3" title="Code: 0xe9b0"><i class="demo-icon WMi-donut">&#xe9b0;</i> <span class="i-name">WMi-donut</span><span class="i-code">0xe9b0</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe9b1"><i class="demo-icon WMi-less-than-equal">&#xe9b1;</i> <span class="i-name">WMi-less-than-equal</span><span class="i-code">0xe9b1</span></div>
+        <div class="the-icons span3" title="Code: 0xe9b2"><i class="demo-icon WMi-not-equal">&#xe9b2;</i> <span class="i-name">WMi-not-equal</span><span class="i-code">0xe9b2</span></div>
+        <div class="the-icons span3" title="Code: 0xe9b3"><i class="demo-icon WMi-cloud-download-alt">&#xe9b3;</i> <span class="i-name">WMi-cloud-download-alt</span><span class="i-code">0xe9b3</span></div>
+        <div class="the-icons span3" title="Code: 0xe9b4"><i class="demo-icon WMi-equal-alt">&#xe9b4;</i> <span class="i-name">WMi-equal-alt</span><span class="i-code">0xe9b4</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe9b5"><i class="demo-icon WMi-align-justify">&#xe9b5;</i> <span class="i-name">WMi-align-justify</span><span class="i-code">0xe9b5</span></div>
+        <div class="the-icons span3" title="Code: 0xe9b7"><i class="demo-icon WMi-tag">&#xe9b7;</i> <span class="i-name">WMi-tag</span><span class="i-code">0xe9b7</span></div>
+        <div class="the-icons span3" title="Code: 0xe9b8"><i class="demo-icon WMi-cash">&#xe9b8;</i> <span class="i-name">WMi-cash</span><span class="i-code">0xe9b8</span></div>
+        <div class="the-icons span3" title="Code: 0xe9b9"><i class="demo-icon WMi-electronic">&#xe9b9;</i> <span class="i-name">WMi-electronic</span><span class="i-code">0xe9b9</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe9bc"><i class="demo-icon WMi-list-2">&#xe9bc;</i> <span class="i-name">WMi-list-2</span><span class="i-code">0xe9bc</span></div>
+        <div class="the-icons span3" title="Code: 0xe9be"><i class="demo-icon WMi-signature">&#xe9be;</i> <span class="i-name">WMi-signature</span><span class="i-code">0xe9be</span></div>
+        <div class="the-icons span3" title="Code: 0xe9bf"><i class="demo-icon WMi-animation">&#xe9bf;</i> <span class="i-name">WMi-animation</span><span class="i-code">0xe9bf</span></div>
+        <div class="the-icons span3" title="Code: 0xe9c0"><i class="demo-icon WMi-account-multiple-plus-1">&#xe9c0;</i> <span class="i-name">WMi-account-multiple-plus-1</span><span class="i-code">0xe9c0</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe9c1"><i class="demo-icon WMi-account-key">&#xe9c1;</i> <span class="i-name">WMi-account-key</span><span class="i-code">0xe9c1</span></div>
+        <div class="the-icons span3" title="Code: 0xe9c8"><i class="demo-icon WMi-shop-bag-2">&#xe9c8;</i> <span class="i-name">WMi-shop-bag-2</span><span class="i-code">0xe9c8</span></div>
+        <div class="the-icons span3" title="Code: 0xe9cd"><i class="demo-icon WMi-open-2">&#xe9cd;</i> <span class="i-name">WMi-open-2</span><span class="i-code">0xe9cd</span></div>
+        <div class="the-icons span3" title="Code: 0xe9db"><i class="demo-icon WMi-alarm-plus">&#xe9db;</i> <span class="i-name">WMi-alarm-plus</span><span class="i-code">0xe9db</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xe9df"><i class="demo-icon WMi-account-multiple-minus-1">&#xe9df;</i> <span class="i-name">WMi-account-multiple-minus-1</span><span class="i-code">0xe9df</span></div>
+        <div class="the-icons span3" title="Code: 0xe9e3"><i class="demo-icon WMi-icons">&#xe9e3;</i> <span class="i-name">WMi-icons</span><span class="i-code">0xe9e3</span></div>
+        <div class="the-icons span3" title="Code: 0xf00e"><i class="demo-icon WMi-pause-1">&#xf00e;</i> <span class="i-name">WMi-pause-1</span><span class="i-code">0xf00e</span></div>
+        <div class="the-icons span3" title="Code: 0xf00f"><i class="demo-icon WMi-play-1">&#xf00f;</i> <span class="i-name">WMi-play-1</span><span class="i-code">0xf00f</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf010"><i class="demo-icon WMi-to-end-1">&#xf010;</i> <span class="i-name">WMi-to-end-1</span><span class="i-code">0xf010</span></div>
+        <div class="the-icons span3" title="Code: 0xf011"><i class="demo-icon WMi-to-start-1">&#xf011;</i> <span class="i-name">WMi-to-start-1</span><span class="i-code">0xf011</span></div>
+        <div class="the-icons span3" title="Code: 0xf012"><i class="demo-icon WMi-account-off">&#xf012;</i> <span class="i-name">WMi-account-off</span><span class="i-code">0xf012</span></div>
+        <div class="the-icons span3" title="Code: 0xf014"><i class="demo-icon WMi-account-plus">&#xf014;</i> <span class="i-name">WMi-account-plus</span><span class="i-code">0xf014</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf015"><i class="demo-icon WMi-account-remove">&#xf015;</i> <span class="i-name">WMi-account-remove</span><span class="i-code">0xf015</span></div>
+        <div class="the-icons span3" title="Code: 0xf019"><i class="demo-icon WMi-account-switch">&#xf019;</i> <span class="i-name">WMi-account-switch</span><span class="i-code">0xf019</span></div>
+        <div class="the-icons span3" title="Code: 0xf029"><i class="demo-icon WMi-hash">&#xf029;</i> <span class="i-name">WMi-hash</span><span class="i-code">0xf029</span></div>
+        <div class="the-icons span3" title="Code: 0xf02a"><i class="demo-icon WMi-alert-outline">&#xf02a;</i> <span class="i-name">WMi-alert-outline</span><span class="i-code">0xf02a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf02d"><i class="demo-icon WMi-book">&#xf02d;</i> <span class="i-name">WMi-book</span><span class="i-code">0xf02d</span></div>
+        <div class="the-icons span3" title="Code: 0xf02f"><i class="demo-icon WMi-food-1">&#xf02f;</i> <span class="i-name">WMi-food-1</span><span class="i-code">0xf02f</span></div>
+        <div class="the-icons span3" title="Code: 0xf034"><i class="demo-icon WMi-mobile-phone">&#xf034;</i> <span class="i-name">WMi-mobile-phone</span><span class="i-code">0xf034</span></div>
+        <div class="the-icons span3" title="Code: 0xf035"><i class="demo-icon WMi-apple">&#xf035;</i> <span class="i-name">WMi-apple</span><span class="i-code">0xf035</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf037"><i class="demo-icon WMi-brightness">&#xf037;</i> <span class="i-name">WMi-brightness</span><span class="i-code">0xf037</span></div>
+        <div class="the-icons span3" title="Code: 0xf05c"><i class="demo-icon WMi-weight-kilogram">&#xf05c;</i> <span class="i-name">WMi-weight-kilogram</span><span class="i-code">0xf05c</span></div>
+        <div class="the-icons span3" title="Code: 0xf080"><i class="demo-icon WMi-stop-1">&#xf080;</i> <span class="i-name">WMi-stop-1</span><span class="i-code">0xf080</span></div>
+        <div class="the-icons span3" title="Code: 0xf08e"><i class="demo-icon WMi-link-ext">&#xf08e;</i> <span class="i-name">WMi-link-ext</span><span class="i-code">0xf08e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf096"><i class="demo-icon WMi-check-empty">&#xf096;</i> <span class="i-name">WMi-check-empty</span><span class="i-code">0xf096</span></div>
+        <div class="the-icons span3" title="Code: 0xf097"><i class="demo-icon WMi-bookmark-empty">&#xf097;</i> <span class="i-name">WMi-bookmark-empty</span><span class="i-code">0xf097</span></div>
+        <div class="the-icons span3" title="Code: 0xf099"><i class="demo-icon WMi-twitter-1">&#xf099;</i> <span class="i-name">WMi-twitter-1</span><span class="i-code">0xf099</span></div>
+        <div class="the-icons span3" title="Code: 0xf09e"><i class="demo-icon WMi-rss">&#xf09e;</i> <span class="i-name">WMi-rss</span><span class="i-code">0xf09e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf0a0"><i class="demo-icon WMi-hdd">&#xf0a0;</i> <span class="i-name">WMi-hdd</span><span class="i-code">0xf0a0</span></div>
+        <div class="the-icons span3" title="Code: 0xf0b2"><i class="demo-icon WMi-resize-full-alt">&#xf0b2;</i> <span class="i-name">WMi-resize-full-alt</span><span class="i-code">0xf0b2</span></div>
+        <div class="the-icons span3" title="Code: 0xf0c3"><i class="demo-icon WMi-beaker">&#xf0c3;</i> <span class="i-name">WMi-beaker</span><span class="i-code">0xf0c3</span></div>
+        <div class="the-icons span3" title="Code: 0xf0c9"><i class="demo-icon WMi-menu">&#xf0c9;</i> <span class="i-name">WMi-menu</span><span class="i-code">0xf0c9</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf0d0"><i class="demo-icon WMi-magic">&#xf0d0;</i> <span class="i-name">WMi-magic</span><span class="i-code">0xf0d0</span></div>
+        <div class="the-icons span3" title="Code: 0xf0d5"><i class="demo-icon WMi-gplus">&#xf0d5;</i> <span class="i-name">WMi-gplus</span><span class="i-code">0xf0d5</span></div>
+        <div class="the-icons span3" title="Code: 0xf0da"><i class="demo-icon WMi-WM-logo">&#xf0da;</i> <span class="i-name">WMi-WM-logo</span><span class="i-code">0xf0da</span></div>
+        <div class="the-icons span3" title="Code: 0xf0dc"><i class="demo-icon WMi-sort">&#xf0dc;</i> <span class="i-name">WMi-sort</span><span class="i-code">0xf0dc</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf0dd"><i class="demo-icon WMi-chronometer-2">&#xf0dd;</i> <span class="i-name">WMi-chronometer-2</span><span class="i-code">0xf0dd</span></div>
+        <div class="the-icons span3" title="Code: 0xf0de"><i class="demo-icon WMi-clothes">&#xf0de;</i> <span class="i-name">WMi-clothes</span><span class="i-code">0xf0de</span></div>
+        <div class="the-icons span3" title="Code: 0xf0e0"><i class="demo-icon WMi-mail-alt">&#xf0e0;</i> <span class="i-name">WMi-mail-alt</span><span class="i-code">0xf0e0</span></div>
+        <div class="the-icons span3" title="Code: 0xf0e2"><i class="demo-icon WMi-cleaning">&#xf0e2;</i> <span class="i-name">WMi-cleaning</span><span class="i-code">0xf0e2</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf0e3"><i class="demo-icon WMi-sea-ship-with-containers-2">&#xf0e3;</i> <span class="i-name">WMi-sea-ship-with-containers-2</span><span class="i-code">0xf0e3</span></div>
+        <div class="the-icons span3" title="Code: 0xf0e7"><i class="demo-icon WMi-wa-fit-2">&#xf0e7;</i> <span class="i-name">WMi-wa-fit-2</span><span class="i-code">0xf0e7</span></div>
+        <div class="the-icons span3" title="Code: 0xf0ec"><i class="demo-icon WMi-exchange">&#xf0ec;</i> <span class="i-name">WMi-exchange</span><span class="i-code">0xf0ec</span></div>
+        <div class="the-icons span3" title="Code: 0xf0f0"><i class="demo-icon WMi-doctor">&#xf0f0;</i> <span class="i-name">WMi-doctor</span><span class="i-code">0xf0f0</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf0f1"><i class="demo-icon WMi-medical">&#xf0f1;</i> <span class="i-name">WMi-medical</span><span class="i-code">0xf0f1</span></div>
+        <div class="the-icons span3" title="Code: 0xf0f3"><i class="demo-icon WMi-bell-alt">&#xf0f3;</i> <span class="i-name">WMi-bell-alt</span><span class="i-code">0xf0f3</span></div>
+        <div class="the-icons span3" title="Code: 0xf0f4"><i class="demo-icon WMi-home-appliances">&#xf0f4;</i> <span class="i-name">WMi-home-appliances</span><span class="i-code">0xf0f4</span></div>
+        <div class="the-icons span3" title="Code: 0xf0f5"><i class="demo-icon WMi-edible">&#xf0f5;</i> <span class="i-name">WMi-edible</span><span class="i-code">0xf0f5</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf0fe"><i class="demo-icon WMi-plus-squared">&#xf0fe;</i> <span class="i-name">WMi-plus-squared</span><span class="i-code">0xf0fe</span></div>
+        <div class="the-icons span3" title="Code: 0xf100"><i class="demo-icon WMi-angle-double-left">&#xf100;</i> <span class="i-name">WMi-angle-double-left</span><span class="i-code">0xf100</span></div>
+        <div class="the-icons span3" title="Code: 0xf101"><i class="demo-icon WMi-angle-double-right">&#xf101;</i> <span class="i-name">WMi-angle-double-right</span><span class="i-code">0xf101</span></div>
+        <div class="the-icons span3" title="Code: 0xf102"><i class="demo-icon WMi-angle-double-up">&#xf102;</i> <span class="i-name">WMi-angle-double-up</span><span class="i-code">0xf102</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf103"><i class="demo-icon WMi-angle-double-down">&#xf103;</i> <span class="i-name">WMi-angle-double-down</span><span class="i-code">0xf103</span></div>
+        <div class="the-icons span3" title="Code: 0xf104"><i class="demo-icon WMi-angle-left">&#xf104;</i> <span class="i-name">WMi-angle-left</span><span class="i-code">0xf104</span></div>
+        <div class="the-icons span3" title="Code: 0xf105"><i class="demo-icon WMi-angle-right">&#xf105;</i> <span class="i-name">WMi-angle-right</span><span class="i-code">0xf105</span></div>
+        <div class="the-icons span3" title="Code: 0xf106"><i class="demo-icon WMi-angle-up">&#xf106;</i> <span class="i-name">WMi-angle-up</span><span class="i-code">0xf106</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf107"><i class="demo-icon WMi-angle-down">&#xf107;</i> <span class="i-name">WMi-angle-down</span><span class="i-code">0xf107</span></div>
+        <div class="the-icons span3" title="Code: 0xf108"><i class="demo-icon WMi-imac">&#xf108;</i> <span class="i-name">WMi-imac</span><span class="i-code">0xf108</span></div>
+        <div class="the-icons span3" title="Code: 0xf109"><i class="demo-icon WMi-laptop">&#xf109;</i> <span class="i-name">WMi-laptop</span><span class="i-code">0xf109</span></div>
+        <div class="the-icons span3" title="Code: 0xf10a"><i class="demo-icon WMi-tablet">&#xf10a;</i> <span class="i-name">WMi-tablet</span><span class="i-code">0xf10a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf10b"><i class="demo-icon WMi-mobile">&#xf10b;</i> <span class="i-name">WMi-mobile</span><span class="i-code">0xf10b</span></div>
+        <div class="the-icons span3" title="Code: 0xf111"><i class="demo-icon WMi-circle">&#xf111;</i> <span class="i-name">WMi-circle</span><span class="i-code">0xf111</span></div>
+        <div class="the-icons span3" title="Code: 0xf120"><i class="demo-icon WMi-command-line">&#xf120;</i> <span class="i-name">WMi-command-line</span><span class="i-code">0xf120</span></div>
+        <div class="the-icons span3" title="Code: 0xf121"><i class="demo-icon WMi-code">&#xf121;</i> <span class="i-name">WMi-code</span><span class="i-code">0xf121</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf123"><i class="demo-icon WMi-star-half-alt">&#xf123;</i> <span class="i-name">WMi-star-half-alt</span><span class="i-code">0xf123</span></div>
+        <div class="the-icons span3" title="Code: 0xf124"><i class="demo-icon WMi-direction">&#xf124;</i> <span class="i-name">WMi-direction</span><span class="i-code">0xf124</span></div>
+        <div class="the-icons span3" title="Code: 0xf125"><i class="demo-icon WMi-crop-1">&#xf125;</i> <span class="i-name">WMi-crop-1</span><span class="i-code">0xf125</span></div>
+        <div class="the-icons span3" title="Code: 0xf127"><i class="demo-icon WMi-unlink">&#xf127;</i> <span class="i-name">WMi-unlink</span><span class="i-code">0xf127</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf129"><i class="demo-icon WMi-info">&#xf129;</i> <span class="i-name">WMi-info</span><span class="i-code">0xf129</span></div>
+        <div class="the-icons span3" title="Code: 0xf12a"><i class="demo-icon WMi-attention-alt">&#xf12a;</i> <span class="i-name">WMi-attention-alt</span><span class="i-code">0xf12a</span></div>
+        <div class="the-icons span3" title="Code: 0xf13b"><i class="demo-icon WMi-html5">&#xf13b;</i> <span class="i-name">WMi-html5</span><span class="i-code">0xf13b</span></div>
+        <div class="the-icons span3" title="Code: 0xf13c"><i class="demo-icon WMi-css3">&#xf13c;</i> <span class="i-name">WMi-css3</span><span class="i-code">0xf13c</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf141"><i class="demo-icon WMi-ellipsis">&#xf141;</i> <span class="i-name">WMi-ellipsis</span><span class="i-code">0xf141</span></div>
+        <div class="the-icons span3" title="Code: 0xf142"><i class="demo-icon WMi-ellipsis-vert">&#xf142;</i> <span class="i-name">WMi-ellipsis-vert</span><span class="i-code">0xf142</span></div>
+        <div class="the-icons span3" title="Code: 0xf14a"><i class="demo-icon WMi-ok-squared">&#xf14a;</i> <span class="i-name">WMi-ok-squared</span><span class="i-code">0xf14a</span></div>
+        <div class="the-icons span3" title="Code: 0xf14e"><i class="demo-icon WMi-compass">&#xf14e;</i> <span class="i-name">WMi-compass</span><span class="i-code">0xf14e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf15b"><i class="demo-icon WMi-doc-inv">&#xf15b;</i> <span class="i-name">WMi-doc-inv</span><span class="i-code">0xf15b</span></div>
+        <div class="the-icons span3" title="Code: 0xf15c"><i class="demo-icon WMi-doc-text-inv">&#xf15c;</i> <span class="i-name">WMi-doc-text-inv</span><span class="i-code">0xf15c</span></div>
+        <div class="the-icons span3" title="Code: 0xf160"><i class="demo-icon WMi-sort-alt-up">&#xf160;</i> <span class="i-name">WMi-sort-alt-up</span><span class="i-code">0xf160</span></div>
+        <div class="the-icons span3" title="Code: 0xf161"><i class="demo-icon WMi-sort-alt-down">&#xf161;</i> <span class="i-name">WMi-sort-alt-down</span><span class="i-code">0xf161</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf16a"><i class="demo-icon WMi-align-right">&#xf16a;</i> <span class="i-name">WMi-align-right</span><span class="i-code">0xf16a</span></div>
+        <div class="the-icons span3" title="Code: 0xf16b"><i class="demo-icon WMi-dropbox">&#xf16b;</i> <span class="i-name">WMi-dropbox</span><span class="i-code">0xf16b</span></div>
+        <div class="the-icons span3" title="Code: 0xf16d"><i class="demo-icon WMi-instagram">&#xf16d;</i> <span class="i-name">WMi-instagram</span><span class="i-code">0xf16d</span></div>
+        <div class="the-icons span3" title="Code: 0xf17a"><i class="demo-icon WMi-windows">&#xf17a;</i> <span class="i-name">WMi-windows</span><span class="i-code">0xf17a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf190"><i class="demo-icon WMi-content-cut">&#xf190;</i> <span class="i-name">WMi-content-cut</span><span class="i-code">0xf190</span></div>
+        <div class="the-icons span3" title="Code: 0xf196"><i class="demo-icon WMi-plus-squared-alt">&#xf196;</i> <span class="i-name">WMi-plus-squared-alt</span><span class="i-code">0xf196</span></div>
+        <div class="the-icons span3" title="Code: 0xf19c"><i class="demo-icon WMi-backup-restore">&#xf19c;</i> <span class="i-name">WMi-backup-restore</span><span class="i-code">0xf19c</span></div>
+        <div class="the-icons span3" title="Code: 0xf19d"><i class="demo-icon WMi-education">&#xf19d;</i> <span class="i-name">WMi-education</span><span class="i-code">0xf19d</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf19e"><i class="demo-icon WMi-crop">&#xf19e;</i> <span class="i-name">WMi-crop</span><span class="i-code">0xf19e</span></div>
+        <div class="the-icons span3" title="Code: 0xf1a0"><i class="demo-icon WMi-google">&#xf1a0;</i> <span class="i-name">WMi-google</span><span class="i-code">0xf1a0</span></div>
+        <div class="the-icons span3" title="Code: 0xf1b0"><i class="demo-icon WMi-paw">&#xf1b0;</i> <span class="i-name">WMi-paw</span><span class="i-code">0xf1b0</span></div>
+        <div class="the-icons span3" title="Code: 0xf1b2"><i class="demo-icon WMi-cube">&#xf1b2;</i> <span class="i-name">WMi-cube</span><span class="i-code">0xf1b2</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf1b3"><i class="demo-icon WMi-cubes">&#xf1b3;</i> <span class="i-name">WMi-cubes</span><span class="i-code">0xf1b3</span></div>
+        <div class="the-icons span3" title="Code: 0xf1b9"><i class="demo-icon WMi-Vehicle">&#xf1b9;</i> <span class="i-name">WMi-Vehicle</span><span class="i-code">0xf1b9</span></div>
+        <div class="the-icons span3" title="Code: 0xf1ba"><i class="demo-icon WMi-delivery">&#xf1ba;</i> <span class="i-name">WMi-delivery</span><span class="i-code">0xf1ba</span></div>
+        <div class="the-icons span3" title="Code: 0xf1c0"><i class="demo-icon WMi-database">&#xf1c0;</i> <span class="i-name">WMi-database</span><span class="i-code">0xf1c0</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf1cb"><i class="demo-icon WMi-codeopen">&#xf1cb;</i> <span class="i-name">WMi-codeopen</span><span class="i-code">0xf1cb</span></div>
+        <div class="the-icons span3" title="Code: 0xf1d8"><i class="demo-icon WMi-paper-plane">&#xf1d8;</i> <span class="i-name">WMi-paper-plane</span><span class="i-code">0xf1d8</span></div>
+        <div class="the-icons span3" title="Code: 0xf1d9"><i class="demo-icon WMi-telegram-1">&#xf1d9;</i> <span class="i-name">WMi-telegram-1</span><span class="i-code">0xf1d9</span></div>
+        <div class="the-icons span3" title="Code: 0xf1de"><i class="demo-icon WMi-sliders">&#xf1de;</i> <span class="i-name">WMi-sliders</span><span class="i-code">0xf1de</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf1e3"><i class="demo-icon WMi-sport-ball">&#xf1e3;</i> <span class="i-name">WMi-sport-ball</span><span class="i-code">0xf1e3</span></div>
+        <div class="the-icons span3" title="Code: 0xf1e6"><i class="demo-icon WMi-plug">&#xf1e6;</i> <span class="i-name">WMi-plug</span><span class="i-code">0xf1e6</span></div>
+        <div class="the-icons span3" title="Code: 0xf1eb"><i class="demo-icon WMi-wifi">&#xf1eb;</i> <span class="i-name">WMi-wifi</span><span class="i-code">0xf1eb</span></div>
+        <div class="the-icons span3" title="Code: 0xf1f8"><i class="demo-icon WMi-trash">&#xf1f8;</i> <span class="i-name">WMi-trash</span><span class="i-code">0xf1f8</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf1fa"><i class="demo-icon WMi-engine">&#xf1fa;</i> <span class="i-name">WMi-engine</span><span class="i-code">0xf1fa</span></div>
+        <div class="the-icons span3" title="Code: 0xf1fb"><i class="demo-icon WMi-eyedropper">&#xf1fb;</i> <span class="i-name">WMi-eyedropper</span><span class="i-code">0xf1fb</span></div>
+        <div class="the-icons span3" title="Code: 0xf1fc"><i class="demo-icon WMi-brush-1">&#xf1fc;</i> <span class="i-name">WMi-brush-1</span><span class="i-code">0xf1fc</span></div>
+        <div class="the-icons span3" title="Code: 0xf1fd"><i class="demo-icon WMi-birthday">&#xf1fd;</i> <span class="i-name">WMi-birthday</span><span class="i-code">0xf1fd</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf200"><i class="demo-icon WMi-chart-pie">&#xf200;</i> <span class="i-name">WMi-chart-pie</span><span class="i-code">0xf200</span></div>
+        <div class="the-icons span3" title="Code: 0xf201"><i class="demo-icon WMi-chart-line">&#xf201;</i> <span class="i-name">WMi-chart-line</span><span class="i-code">0xf201</span></div>
+        <div class="the-icons span3" title="Code: 0xf204"><i class="demo-icon WMi-toggle-off">&#xf204;</i> <span class="i-name">WMi-toggle-off</span><span class="i-code">0xf204</span></div>
+        <div class="the-icons span3" title="Code: 0xf205"><i class="demo-icon WMi-toggle-on">&#xf205;</i> <span class="i-name">WMi-toggle-on</span><span class="i-code">0xf205</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf219"><i class="demo-icon WMi-diamond">&#xf219;</i> <span class="i-name">WMi-diamond</span><span class="i-code">0xf219</span></div>
+        <div class="the-icons span3" title="Code: 0xf21c"><i class="demo-icon WMi-motorcycle">&#xf21c;</i> <span class="i-name">WMi-motorcycle</span><span class="i-code">0xf21c</span></div>
+        <div class="the-icons span3" title="Code: 0xf21e"><i class="demo-icon WMi-heartbeat">&#xf21e;</i> <span class="i-name">WMi-heartbeat</span><span class="i-code">0xf21e</span></div>
+        <div class="the-icons span3" title="Code: 0xf231"><i class="demo-icon WMi-pinterest-1">&#xf231;</i> <span class="i-name">WMi-pinterest-1</span><span class="i-code">0xf231</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf234"><i class="demo-icon WMi-user-plus">&#xf234;</i> <span class="i-name">WMi-user-plus</span><span class="i-code">0xf234</span></div>
+        <div class="the-icons span3" title="Code: 0xf235"><i class="demo-icon WMi-user-times">&#xf235;</i> <span class="i-name">WMi-user-times</span><span class="i-code">0xf235</span></div>
+        <div class="the-icons span3" title="Code: 0xf247"><i class="demo-icon WMi-flip-to-back-2">&#xf247;</i> <span class="i-name">WMi-flip-to-back-2</span><span class="i-code">0xf247</span></div>
+        <div class="the-icons span3" title="Code: 0xf24d"><i class="demo-icon WMi-clone">&#xf24d;</i> <span class="i-name">WMi-clone</span><span class="i-code">0xf24d</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf24e"><i class="demo-icon WMi-balance-scale">&#xf24e;</i> <span class="i-name">WMi-balance-scale</span><span class="i-code">0xf24e</span></div>
+        <div class="the-icons span3" title="Code: 0xf266"><i class="demo-icon WMi-wikipedia">&#xf266;</i> <span class="i-name">WMi-wikipedia</span><span class="i-code">0xf266</span></div>
+        <div class="the-icons span3" title="Code: 0xf26c"><i class="demo-icon WMi-television">&#xf26c;</i> <span class="i-name">WMi-television</span><span class="i-code">0xf26c</span></div>
+        <div class="the-icons span3" title="Code: 0xf275"><i class="demo-icon WMi-industry">&#xf275;</i> <span class="i-name">WMi-industry</span><span class="i-code">0xf275</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf277"><i class="demo-icon WMi-map-signs-1">&#xf277;</i> <span class="i-name">WMi-map-signs-1</span><span class="i-code">0xf277</span></div>
+        <div class="the-icons span3" title="Code: 0xf278"><i class="demo-icon WMi-map-o-1">&#xf278;</i> <span class="i-name">WMi-map-o-1</span><span class="i-code">0xf278</span></div>
+        <div class="the-icons span3" title="Code: 0xf279"><i class="demo-icon WMi-map">&#xf279;</i> <span class="i-name">WMi-map</span><span class="i-code">0xf279</span></div>
+        <div class="the-icons span3" title="Code: 0xf27a"><i class="demo-icon WMi-list-ul-2">&#xf27a;</i> <span class="i-name">WMi-list-ul-2</span><span class="i-code">0xf27a</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf282"><i class="demo-icon WMi-edge">&#xf282;</i> <span class="i-name">WMi-edge</span><span class="i-code">0xf282</span></div>
+        <div class="the-icons span3" title="Code: 0xf283"><i class="demo-icon WMi-credit-card-alt">&#xf283;</i> <span class="i-name">WMi-credit-card-alt</span><span class="i-code">0xf283</span></div>
+        <div class="the-icons span3" title="Code: 0xf290"><i class="demo-icon WMi-shopping-bag">&#xf290;</i> <span class="i-name">WMi-shopping-bag</span><span class="i-code">0xf290</span></div>
+        <div class="the-icons span3" title="Code: 0xf29c"><i class="demo-icon WMi-question-circle-o">&#xf29c;</i> <span class="i-name">WMi-question-circle-o</span><span class="i-code">0xf29c</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf2b6"><i class="demo-icon WMi-envelope-open">&#xf2b6;</i> <span class="i-name">WMi-envelope-open</span><span class="i-code">0xf2b6</span></div>
+        <div class="the-icons span3" title="Code: 0xf2b7"><i class="demo-icon WMi-envelope-open-o">&#xf2b7;</i> <span class="i-name">WMi-envelope-open-o</span><span class="i-code">0xf2b7</span></div>
+        <div class="the-icons span3" title="Code: 0xf2c6"><i class="demo-icon WMi-telegram-4">&#xf2c6;</i> <span class="i-name">WMi-telegram-4</span><span class="i-code">0xf2c6</span></div>
+        <div class="the-icons span3" title="Code: 0xf2c8"><i class="demo-icon WMi-hanger-2">&#xf2c8;</i> <span class="i-name">WMi-hanger-2</span><span class="i-code">0xf2c8</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf2dc"><i class="demo-icon WMi-text">&#xf2dc;</i> <span class="i-name">WMi-text</span><span class="i-code">0xf2dc</span></div>
+        <div class="the-icons span3" title="Code: 0xf2f6"><i class="demo-icon WMi-image-filter-none">&#xf2f6;</i> <span class="i-name">WMi-image-filter-none</span><span class="i-code">0xf2f6</span></div>
+        <div class="the-icons span3" title="Code: 0xf300"><i class="demo-icon WMi-facebook">&#xf300;</i> <span class="i-name">WMi-facebook</span><span class="i-code">0xf300</span></div>
+        <div class="the-icons span3" title="Code: 0xf302"><i class="demo-icon WMi-twitter">&#xf302;</i> <span class="i-name">WMi-twitter</span><span class="i-code">0xf302</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf30c"><i class="demo-icon WMi-linkedin-squared">&#xf30c;</i> <span class="i-name">WMi-linkedin-squared</span><span class="i-code">0xf30c</span></div>
+        <div class="the-icons span3" title="Code: 0xf318"><i class="demo-icon WMi-ruler-combined">&#xf318;</i> <span class="i-name">WMi-ruler-combined</span><span class="i-code">0xf318</span></div>
+        <div class="the-icons span3" title="Code: 0xf31a"><i class="demo-icon WMi-linkedin">&#xf31a;</i> <span class="i-name">WMi-linkedin</span><span class="i-code">0xf31a</span></div>
+        <div class="the-icons span3" title="Code: 0xf31e"><i class="demo-icon WMi-javascript">&#xf31e;</i> <span class="i-name">WMi-javascript</span><span class="i-code">0xf31e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf321"><i class="demo-icon WMi-supermarket">&#xf321;</i> <span class="i-name">WMi-supermarket</span><span class="i-code">0xf321</span></div>
+        <div class="the-icons span3" title="Code: 0xf325"><i class="demo-icon WMi-win8">&#xf325;</i> <span class="i-name">WMi-win8</span><span class="i-code">0xf325</span></div>
+        <div class="the-icons span3" title="Code: 0xf32d"><i class="demo-icon WMi-instagram-1">&#xf32d;</i> <span class="i-name">WMi-instagram-1</span><span class="i-code">0xf32d</span></div>
+        <div class="the-icons span3" title="Code: 0xf368"><i class="demo-icon WMi-message-reply-text-2">&#xf368;</i> <span class="i-name">WMi-message-reply-text-2</span><span class="i-code">0xf368</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf36a"><i class="demo-icon WMi-message-text-outline-2">&#xf36a;</i> <span class="i-name">WMi-message-text-outline-2</span><span class="i-code">0xf36a</span></div>
+        <div class="the-icons span3" title="Code: 0xf382"><i class="demo-icon WMi-cloud-upload-alt">&#xf382;</i> <span class="i-name">WMi-cloud-upload-alt</span><span class="i-code">0xf382</span></div>
+        <div class="the-icons span3" title="Code: 0xf3f0"><i class="demo-icon WMi-freight-truck">&#xf3f0;</i> <span class="i-name">WMi-freight-truck</span><span class="i-code">0xf3f0</span></div>
+        <div class="the-icons span3" title="Code: 0xf405"><i class="demo-icon WMi-tree">&#xf405;</i> <span class="i-name">WMi-tree</span><span class="i-code">0xf405</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf474"><i class="demo-icon WMi-school">&#xf474;</i> <span class="i-name">WMi-school</span><span class="i-code">0xf474</span></div>
+        <div class="the-icons span3" title="Code: 0xf489"><i class="demo-icon WMi-selection">&#xf489;</i> <span class="i-name">WMi-selection</span><span class="i-code">0xf489</span></div>
+        <div class="the-icons span3" title="Code: 0xf4b9"><i class="demo-icon WMi-furniture">&#xf4b9;</i> <span class="i-name">WMi-furniture</span><span class="i-code">0xf4b9</span></div>
+        <div class="the-icons span3" title="Code: 0xf4fc"><i class="demo-icon WMi-user-check">&#xf4fc;</i> <span class="i-name">WMi-user-check</span><span class="i-code">0xf4fc</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf504"><i class="demo-icon WMi-brightness-1">&#xf504;</i> <span class="i-name">WMi-brightness-1</span><span class="i-code">0xf504</span></div>
+        <div class="the-icons span3" title="Code: 0xf526"><i class="demo-icon WMi-chart-bar-1">&#xf526;</i> <span class="i-name">WMi-chart-bar-1</span><span class="i-code">0xf526</span></div>
+        <div class="the-icons span3" title="Code: 0xf56c"><i class="demo-icon WMi-view-carousel">&#xf56c;</i> <span class="i-name">WMi-view-carousel</span><span class="i-code">0xf56c</span></div>
+        <div class="the-icons span3" title="Code: 0xf56e"><i class="demo-icon WMi-view-dashboard">&#xf56e;</i> <span class="i-name">WMi-view-dashboard</span><span class="i-code">0xf56e</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf56f"><i class="demo-icon WMi-view-day">&#xf56f;</i> <span class="i-name">WMi-view-day</span><span class="i-code">0xf56f</span></div>
+        <div class="the-icons span3" title="Code: 0xf574"><i class="demo-icon WMi-view-quilt">&#xf574;</i> <span class="i-name">WMi-view-quilt</span><span class="i-code">0xf574</span></div>
+        <div class="the-icons span3" title="Code: 0xf5b7"><i class="demo-icon WMi-wrench">&#xf5b7;</i> <span class="i-name">WMi-wrench</span><span class="i-code">0xf5b7</span></div>
+        <div class="the-icons span3" title="Code: 0xf5ed"><i class="demo-icon WMi-Scientific">&#xf5ed;</i> <span class="i-name">WMi-Scientific</span><span class="i-code">0xf5ed</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf5f7"><i class="demo-icon WMi-advertisement-2">&#xf5f7;</i> <span class="i-name">WMi-advertisement-2</span><span class="i-code">0xf5f7</span></div>
+        <div class="the-icons span3" title="Code: 0xf5f8"><i class="demo-icon WMi-advertisement-1">&#xf5f8;</i> <span class="i-name">WMi-advertisement-1</span><span class="i-code">0xf5f8</span></div>
+        <div class="the-icons span3" title="Code: 0xf5fa"><i class="demo-icon WMi-chat-1">&#xf5fa;</i> <span class="i-name">WMi-chat-1</span><span class="i-code">0xf5fa</span></div>
+        <div class="the-icons span3" title="Code: 0xf5fb"><i class="demo-icon WMi-chat-alt">&#xf5fb;</i> <span class="i-name">WMi-chat-alt</span><span class="i-code">0xf5fb</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf5fc"><i class="demo-icon WMi-send-message">&#xf5fc;</i> <span class="i-name">WMi-send-message</span><span class="i-code">0xf5fc</span></div>
+        <div class="the-icons span3" title="Code: 0xf631"><i class="demo-icon WMi-account-settings-variant-1">&#xf631;</i> <span class="i-name">WMi-account-settings-variant-1</span><span class="i-code">0xf631</span></div>
+        <div class="the-icons span3" title="Code: 0xf65f"><i class="demo-icon WMi-shape-rectangle-plus-2">&#xf65f;</i> <span class="i-name">WMi-shape-rectangle-plus-2</span><span class="i-code">0xf65f</span></div>
+        <div class="the-icons span3" title="Code: 0xf665"><i class="demo-icon WMi-beauty-3">&#xf665;</i> <span class="i-name">WMi-beauty-3</span><span class="i-code">0xf665</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf66b"><i class="demo-icon WMi-kaaba">&#xf66b;</i> <span class="i-name">WMi-kaaba</span><span class="i-code">0xf66b</span></div>
+        <div class="the-icons span3" title="Code: 0xf699"><i class="demo-icon WMi-star-and-crescent">&#xf699;</i> <span class="i-name">WMi-star-and-crescent</span><span class="i-code">0xf699</span></div>
+        <div class="the-icons span3" title="Code: 0xf6b4"><i class="demo-icon WMi-lamp">&#xf6b4;</i> <span class="i-name">WMi-lamp</span><span class="i-code">0xf6b4</span></div>
+        <div class="the-icons span3" title="Code: 0xf6bb"><i class="demo-icon WMi-account-edit">&#xf6bb;</i> <span class="i-name">WMi-account-edit</span><span class="i-code">0xf6bb</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf727"><i class="demo-icon WMi-view-parallel">&#xf727;</i> <span class="i-name">WMi-view-parallel</span><span class="i-code">0xf727</span></div>
+        <div class="the-icons span3" title="Code: 0xf739"><i class="demo-icon WMi-cancel-2">&#xf739;</i> <span class="i-name">WMi-cancel-2</span><span class="i-code">0xf739</span></div>
+        <div class="the-icons span3" title="Code: 0xf787"><i class="demo-icon WMi-truck-fast-2">&#xf787;</i> <span class="i-name">WMi-truck-fast-2</span><span class="i-code">0xf787</span></div>
+        <div class="the-icons span3" title="Code: 0xf7a9"><i class="demo-icon WMi-heart-broken">&#xf7a9;</i> <span class="i-name">WMi-heart-broken</span><span class="i-code">0xf7a9</span></div>
+      </div>
+      <div class="row">
+        <div class="the-icons span3" title="Code: 0xf7c2"><i class="demo-icon WMi-money-check-alt">&#xf7c2;</i> <span class="i-name">WMi-money-check-alt</span><span class="i-code">0xf7c2</span></div>
+      </div>
+    </div>
+    <div class="container footer">Generated by <a href="https://fontello.com">fontello.com</a></div>
+  </body>
+</html>
